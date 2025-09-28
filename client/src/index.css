@@ -10,32 +10,32 @@
   --card-foreground: hsl(210 24% 16%);
   --popover: hsl(0 0% 100%);
   --popover-foreground: hsl(210 24% 16%);
-  --primary: hsl(212 100% 47%);
+  --primary: hsl(355 68% 54%);
   --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(210 60% 98%);
-  --secondary-foreground: hsl(210 24% 16%);
+  --secondary: hsl(225 57% 24%);
+  --secondary-foreground: hsl(0 0% 100%);
   --muted: hsl(210 60% 98%);
   --muted-foreground: hsl(210 12% 47%);
-  --accent: hsl(210 60% 98%);
-  --accent-foreground: hsl(210 24% 16%);
+  --accent: hsl(225 57% 24%);
+  --accent-foreground: hsl(0 0% 100%);
   --destructive: hsl(0 84% 60%);
   --destructive-foreground: hsl(0 0% 100%);
   --border: hsl(210 20% 94%);
   --input: hsl(210 20% 94%);
-  --ring: hsl(212 100% 47%);
-  --chart-1: hsl(212 100% 47%);
-  --chart-2: hsl(173 58% 39%);
+  --ring: hsl(355 68% 54%);
+  --chart-1: hsl(355 68% 54%);
+  --chart-2: hsl(225 57% 24%);
   --chart-3: hsl(197 37% 24%);
   --chart-4: hsl(43 74% 66%);
   --chart-5: hsl(27 87% 67%);
   --sidebar: hsl(0 0% 100%);
   --sidebar-foreground: hsl(210 24% 16%);
-  --sidebar-primary: hsl(212 100% 47%);
+  --sidebar-primary: hsl(355 68% 54%);
   --sidebar-primary-foreground: hsl(0 0% 100%);
-  --sidebar-accent: hsl(210 60% 98%);
-  --sidebar-accent-foreground: hsl(210 24% 16%);
+  --sidebar-accent: hsl(225 57% 24%);
+  --sidebar-accent-foreground: hsl(0 0% 100%);
   --sidebar-border: hsl(210 20% 94%);
-  --sidebar-ring: hsl(212 100% 47%);
+  --sidebar-ring: hsl(355 68% 54%);
   --font-sans: 'Nunito', sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
@@ -55,19 +55,19 @@
   --card-foreground: hsl(210 20% 94%);
   --popover: hsl(210 24% 10%);
   --popover-foreground: hsl(210 20% 94%);
-  --primary: hsl(212 100% 47%);
+  --primary: hsl(355 68% 54%);
   --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(210 24% 16%);
-  --secondary-foreground: hsl(210 20% 94%);
+  --secondary: hsl(225 57% 24%);
+  --secondary-foreground: hsl(0 0% 100%);
   --muted: hsl(210 24% 16%);
   --muted-foreground: hsl(210 12% 47%);
-  --accent: hsl(210 24% 16%);
-  --accent-foreground: hsl(210 20% 94%);
+  --accent: hsl(225 57% 24%);
+  --accent-foreground: hsl(0 0% 100%);
   --destructive: hsl(0 84% 60%);
   --destructive-foreground: hsl(0 0% 100%);
   --border: hsl(210 24% 16%);
   --input: hsl(210 24% 16%);
-  --ring: hsl(212 100% 47%);
+  --ring: hsl(355 68% 54%);
 }
 
 @layer base {
@@ -86,11 +86,11 @@
 
 @layer utilities {
   .landify-gradient {
-    background: linear-gradient(135deg, hsl(212 100% 47%) 0%, hsl(173 58% 39%) 100%);
+    background: linear-gradient(135deg, hsl(355 68% 54%) 0%, hsl(225 57% 24%) 100%);
   }
 
   .landify-hero-bg {
-    background: linear-gradient(135deg, hsl(212 100% 48%) 0%, hsl(212 100% 52%) 100%);
+    background: linear-gradient(135deg, hsl(355 68% 54%) 0%, hsl(355 70% 60%) 100%);
   }
 
   .hover-lift {
@@ -108,6 +108,26 @@
 
   .animate-fadeIn {
     animation: fadeIn 1s ease-out;
+  }
+
+  .animate-slideInLeft {
+    animation: slideInLeft 0.8s ease-out;
+  }
+
+  .animate-slideInRight {
+    animation: slideInRight 0.8s ease-out;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s ease-in-out infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulseSoft 3s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
 
   @keyframes fadeInUp {
@@ -130,6 +150,55 @@
     }
   }
 
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes bounceGentle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulseSoft {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
   .process-step {
     position: relative;
   }
@@ -141,7 +210,7 @@
     right: -2rem;
     width: 3rem;
     height: 2px;
-    background: hsl(212 100% 47%);
+    background: hsl(355 68% 54%);
     transform: translateY(-50%);
   }
 
@@ -166,6 +235,95 @@
   .landify-card:hover {
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
+  }
+
+  /* Button hover effects */
+  .btn-hover-scale {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-hover-scale:hover {
+    transform: scale(1.05);
+  }
+
+  /* Icon animations */
+  .icon-hover-rotate {
+    transition: transform 0.3s ease;
+  }
+
+  .icon-hover-rotate:hover {
+    transform: rotate(360deg);
+  }
+
+  .icon-hover-bounce {
+    transition: transform 0.3s ease;
+  }
+
+  .icon-hover-bounce:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Navigation hover effects */
+  .nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background: hsl(355 68% 54%);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  /* Card entrance animations */
+  .card-stagger-1 {
+    animation-delay: 0.1s;
+  }
+
+  .card-stagger-2 {
+    animation-delay: 0.2s;
+  }
+
+  .card-stagger-3 {
+    animation-delay: 0.3s;
+  }
+
+  .card-stagger-4 {
+    animation-delay: 0.4s;
+  }
+
+  /* Loading and shimmer effects */
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(355 68% 54%) 0%, hsl(225 57% 24%) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .section-padding {

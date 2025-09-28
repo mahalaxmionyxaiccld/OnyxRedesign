@@ -88,6 +88,11 @@ export default function Navigation() {
                       View All Products
                     </Link>
                   </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/products/material-handling-crane" className="w-full" data-testid="nav-material-handling-crane">
+                      Material Handling Crane
+                    </Link>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
 
@@ -204,6 +209,14 @@ export default function Navigation() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   View All Products
+                </Link>
+                <Link 
+                  href="/products/material-handling-crane"
+                  className="block px-6 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
+                  data-testid="mobile-nav-material-handling-crane"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Material Handling Crane
                 </Link>
               </div>
 

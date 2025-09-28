@@ -13,6 +13,7 @@ import ProductsPage from "@/pages/products";
 import BlogsPage from "@/pages/blogs";
 import AboutPage from "@/pages/about";
 import ContactPage from "@/pages/contact";
+import MaterialHandlingCranePage from "@/pages/products/material-handling-crane";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -25,6 +26,7 @@ function Router() {
       <Route path="/offerings/vacuum-casting" component={VacuumCastingPage} />
       <Route path="/offerings/fabrication" component={FabricationPage} />
       <Route path="/products" component={ProductsPage} />
+      <Route path="/products/material-handling-crane" component={MaterialHandlingCranePage} />
       <Route path="/blogs" component={BlogsPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/contact" component={ContactPage} />

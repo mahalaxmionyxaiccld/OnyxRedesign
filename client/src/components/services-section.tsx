@@ -68,6 +68,7 @@ export default function ServicesSection() {
               </Button>
             </div>
           </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

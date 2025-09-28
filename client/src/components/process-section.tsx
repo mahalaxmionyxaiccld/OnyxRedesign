@@ -1,28 +1,21 @@
 import { Button } from "@/components/ui/button";
-import { PenTool, Factory, Truck } from "lucide-react";
 
 export default function ProcessSection() {
   const steps = [
     {
-      icon: <PenTool className="w-12 h-12" />,
+      icon: "https://static.wixstatic.com/media/adfab1_7bb6f0157fe34bd29b16dff423962f14~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/blueprint.png",
       title: "You Design",
-      description: "Share your concept, and we'll refine it for optimal production.",
-      bgColor: "bg-primary/10",
-      iconColor: "text-primary"
+      description: "Share your concept, and we'll refine it for optimal production."
     },
     {
-      icon: <Factory className="w-12 h-12" />,
+      icon: "https://static.wixstatic.com/media/adfab1_ddfd068904b642dabafdfb29ae9751fc~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/manufacture.png",
       title: "We Manufacture",
-      description: "Using cutting-edge technology, we bring your design to life with precision.",
-      bgColor: "bg-secondary/10",
-      iconColor: "text-secondary"
+      description: "Using cutting-edge technology, we bring your design to life with precision."
     },
     {
-      icon: <Truck className="w-12 h-12" />,
+      icon: "https://static.wixstatic.com/media/adfab1_7bb6f0157fe34bd29b16dff423962f14~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/blueprint.png",
       title: "Delivery On-Time",
-      description: "High-quality, production-ready parts, shipped with speed and reliability.",
-      bgColor: "bg-primary/10",
-      iconColor: "text-primary"
+      description: "High-quality, production-ready parts, shipped with speed and reliability."
     }
   ];
 
@@ -34,39 +27,42 @@ export default function ProcessSection() {
   };
 
   return (
-    <section className="py-24 bg-background">
+    <section className="section-padding bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6" data-testid="process-title">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6" data-testid="process-title">
             Process Simplified
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="process-description">
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed" data-testid="process-description">
             Our streamlined three-step process ensures your ideas become reality with maximum efficiency and quality.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
           {steps.map((step, index) => (
             <div key={index} className="process-step text-center" data-testid={`process-step-${index}`}>
-              <div className={`w-24 h-24 ${step.bgColor} rounded-full flex items-center justify-center mx-auto mb-6`}>
-                <div className={step.iconColor}>
-                  {step.icon}
-                </div>
+              <div className="w-32 h-32 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-8 landify-card">
+                <img 
+                  src={step.icon} 
+                  alt={`${step.title} process icon`}
+                  className="w-20 h-20 object-contain"
+                />
               </div>
-              <h3 className="text-2xl font-semibold mb-4" data-testid={`process-step-title-${index}`}>
+              <h3 className="text-xl lg:text-2xl font-bold mb-4 text-foreground" data-testid={`process-step-title-${index}`}>
                 {step.title}
               </h3>
-              <p className="text-muted-foreground" data-testid={`process-step-description-${index}`}>
+              <p className="text-muted-foreground leading-relaxed" data-testid={`process-step-description-${index}`}>
                 {step.description}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <Button 
             onClick={scrollToContact}
-            className="bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
+            size="lg"
+            className="bg-primary text-primary-foreground px-10 py-4 text-lg font-semibold hover:bg-primary/90 transition-all duration-200 hover-lift"
             data-testid="process-lets-connect"
           >
             Let's Connect

@@ -7,6 +7,7 @@ import ProcessSection from "@/components/process-section";
 import IndustriesSection from "@/components/industries-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import ClientLogosSection from "@/components/client-logos-section";
+import ArticlesSection from "@/components/articles-section";
 import ContactSection from "@/components/contact-section";
 import Footer from "@/components/footer";
 
@@ -22,6 +23,7 @@ export default function Home() {
       <IndustriesSection />
       <TestimonialsSection />
       <ClientLogosSection />
+      <ArticlesSection />
       <ContactSection />
       <Footer />
     </div>

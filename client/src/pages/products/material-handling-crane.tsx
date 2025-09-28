@@ -11,23 +11,23 @@ export default function MaterialHandlingCranePage() {
   const features = [
     {
       icon: <CheckCircle className="h-6 w-6 text-primary" />,
-      title: "Heavy Duty Construction",
-      description: "Built to handle loads up to 50 tons with maximum reliability"
+      title: "Design",
+      description: "Crafting innovative designs that balance functionality, precision, and aesthetics for superior products."
     },
     {
       icon: <Truck className="h-6 w-6 text-primary" />,
-      title: "Versatile Operation",
-      description: "Suitable for various industrial and construction applications"
+      title: "Engineering",
+      description: "Delivering expert engineering solutions that ensure efficiency, accuracy, and reliability in every project."
     },
     {
       icon: <Settings className="h-6 w-6 text-primary" />,
-      title: "Precision Control",
-      description: "Advanced control systems for accurate load positioning"
+      title: "Material",
+      description: "Using high-quality, durable materials to guarantee product longevity, performance, and customer satisfaction."
     },
     {
       icon: <Shield className="h-6 w-6 text-primary" />,
-      title: "Safety First",
-      description: "Multiple safety features and compliance with industry standards"
+      title: "Manufacturing",
+      description: "Employing advanced manufacturing techniques to produce flawless, high-precision products at every scale."
     }
   ];
 
@@ -71,10 +71,10 @@ export default function MaterialHandlingCranePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" data-testid="hero-title">
-                Material Handling Crane
+                Bridge/Overhead Cranes & Material Handling Solutions
               </h1>
               <p className="text-xl text-muted-foreground mb-8" data-testid="hero-description">
-                Heavy-duty material handling cranes designed for maximum efficiency, safety, and reliability. Perfect for construction, manufacturing, and industrial applications requiring precise load management.
+                Precision-engineered products that uphold the highest standards of quality and the trust of our valued clients. At Onyx Industries, we deliver precision-engineered products built with superior quality and reliability across 58+ installations, 25+ happy clients, and 60+ services completed.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 

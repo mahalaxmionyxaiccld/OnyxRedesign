@@ -1,6 +1,27 @@
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 
 export default function HeroSection() {
+  const [typedText, setTypedText] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
+  const fullText = "We bring your ideas to life with precision & excellence";
+  
+  useEffect(() => {
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index <= fullText.length) {
+        setTypedText(fullText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(timer);
+        // Hide cursor after typing is complete
+        setTimeout(() => setShowCursor(false), 1000);
+      }
+    }, 100);
+    
+    return () => clearInterval(timer);
+  }, []);
+
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
@@ -23,8 +44,8 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left animate-fadeInUp">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6" data-testid="hero-title">
-              We bring your ideas to life with{" "}
-              <span className="text-white/90">precision & excellence</span>
+              {typedText}
+              {showCursor && <span className="animate-pulse">|</span>}
             </h1>
             <p className="text-xl lg:text-2xl text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0" data-testid="hero-description">
               Turning concepts into tangible, high-quality products

@@ -25,9 +25,13 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-primary" data-testid="logo">
-              Onyx Industries
-            </div>
+            <Link href="/" className="flex items-center" data-testid="logo">
+              <img 
+                src="/attached_assets/logo_1759058611278.webp" 
+                alt="Onyx Industries" 
+                className="h-12 w-auto"
+              />
+            </Link>
           </div>
           
           {/* Desktop Navigation */}
@@ -91,6 +95,11 @@ export default function Navigation() {
                   <DropdownMenuItem asChild>
                     <Link href="/products/material-handling-crane" className="w-full" data-testid="nav-material-handling-crane">
                       Material Handling Crane
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="/products/software-services" className="w-full" data-testid="nav-software-services">
+                      Software Services
                     </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -217,6 +226,14 @@ export default function Navigation() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Material Handling Crane
+                </Link>
+                <Link 
+                  href="/products/software-services"
+                  className="block px-6 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
+                  data-testid="mobile-nav-software-services"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Software Services
                 </Link>
               </div>
 

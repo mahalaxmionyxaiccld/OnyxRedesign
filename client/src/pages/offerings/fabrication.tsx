@@ -119,10 +119,10 @@ export default function FabricationPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" data-testid="hero-title">
-                Custom Fabrication Services
+                Custom Fabrication Service
               </h1>
               <p className="text-xl text-muted-foreground mb-8" data-testid="hero-description">
-                Complete fabrication solutions for complex projects. From heavy structural work to precision assemblies, we deliver custom fabricated solutions that meet your exact requirements.
+                Get instant online fabrication service quotes on custom parts in over 80 metal and plastic materials. Order Fabricated items and get Free Shipping on all US orders. ISO 9001:2015, ISO 13485, IATF 16949:2016, and AS9100D certified. ITAR registered.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 

@@ -14,6 +14,7 @@ import BlogsPage from "@/pages/blogs";
 import AboutPage from "@/pages/about";
 import ContactPage from "@/pages/contact";
 import MaterialHandlingCranePage from "@/pages/products/material-handling-crane";
+import SoftwareServicesPage from "@/pages/products/software-services";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -27,6 +28,7 @@ function Router() {
       <Route path="/offerings/fabrication" component={FabricationPage} />
       <Route path="/products" component={ProductsPage} />
       <Route path="/products/material-handling-crane" component={MaterialHandlingCranePage} />
+      <Route path="/products/software-services" component={SoftwareServicesPage} />
       <Route path="/blogs" component={BlogsPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/contact" component={ContactPage} />

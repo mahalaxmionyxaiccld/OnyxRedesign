@@ -11,23 +11,23 @@ export default function MachiningPage() {
   const capabilities = [
     {
       icon: <Target className="h-6 w-6 text-primary" />,
-      title: "Precision Machining",
-      description: "Tight tolerances down to ±0.0005 inches for critical components"
+      title: "Custom CNC Machining",
+      description: "Quality prototypes and production parts. 1-Day expedite. Free shipping on all US and international orders."
     },
     {
       icon: <Zap className="h-6 w-6 text-primary" />,
-      title: "High-Speed Production",
-      description: "Advanced CNC equipment for efficient large-volume manufacturing"
+      title: "Custom CNC Turning",
+      description: "Quality prototypes and production parts in as little as one day. Free shipping on all US and international orders."
     },
     {
       icon: <Cog className="h-6 w-6 text-primary" />,
-      title: "Multi-Axis Machining", 
-      description: "Complex geometries with 3, 4, and 5-axis CNC capabilities"
+      title: "Custom CNC Milling", 
+      description: "High-Quality Large Format CNC Milling 1-Day Expedite Available. Free Shipping on All US and International Orders."
     },
     {
       icon: <Award className="h-6 w-6 text-primary" />,
-      title: "Quality Certified",
-      description: "ISO 9001 certified processes ensuring consistent quality"
+      title: "Custom CNC Drilling",
+      description: "Prototypes, color concept models, and simulated overmold parts in days Free shipping on all US orders"
     }
   ];
 
@@ -75,10 +75,10 @@ export default function MachiningPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" data-testid="hero-title">
-                Precision Machining Services
+                Custom CNC Machining Services
               </h1>
               <p className="text-xl text-muted-foreground mb-8" data-testid="hero-description">
-                Advanced CNC machining capabilities for high-precision components. From prototypes to production runs, we deliver exceptional quality with tight tolerances and superior surface finishes.
+                Get instant quotes on custom metal and plastic machined parts with our Online CNC Machining Service. Make quick turn prototypes and production parts in days with free standard shipping on all US orders. ISO 9001:2015, ISO 13485, IATF 16949:2016, and AS9100D certified. ITAR registered.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -116,10 +116,10 @@ export default function MachiningPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6" data-testid="capabilities-title">
-              Advanced Machining Capabilities
+              Why Use Onyx for Custom CNC Machining Services?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="capabilities-description">
-              State-of-the-art CNC equipment and experienced machinists delivering precision parts for demanding applications.
+              Onyx provides a custom online CNC machining service to engineers, product developers, designers, and more through our vetted network of suppliers. Our highly qualified AS9100D machine shops can make any custom design, simple or complex.
             </p>
           </div>
 

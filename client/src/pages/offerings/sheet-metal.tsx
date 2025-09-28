@@ -11,23 +11,23 @@ export default function SheetMetalPage() {
   const capabilities = [
     {
       icon: <Layers className="h-6 w-6 text-primary" />,
-      title: "Precision Cutting",
-      description: "Laser and plasma cutting with exceptional accuracy and edge quality"
+      title: "Sheet Cutting Services",
+      description: "Quality prototypes and production parts. 1-Day expedite. Free shipping on all US and international orders."
     },
     {
       icon: <Wrench className="h-6 w-6 text-primary" />,
-      title: "Expert Forming",
-      description: "Press brake forming and rolling for complex geometries"
+      title: "Custom Online Laser Cutting Service",
+      description: "Quality prototypes and production parts in as little as one day. Free shipping on all US and international orders."
     },
     {
       icon: <Shield className="h-6 w-6 text-primary" />,
-      title: "Welding Excellence",
-      description: "Certified welders for TIG, MIG, and specialty welding processes"
+      title: "Online Waterjet Cutting Service",
+      description: "High-Quality Large Format cutting 1-Day Expedite Available. Free Shipping on All US and International Orders."
     },
     {
       icon: <Award className="h-6 w-6 text-primary" />,
-      title: "Quality Finishing",
-      description: "Professional powder coating, painting, and surface treatments"
+      title: "Plasma Cutting Service",
+      description: "Prototypes, color concept models, and simulated overmold parts in days Free shipping on all US orders"
     }
   ];
 
@@ -86,10 +86,10 @@ export default function SheetMetalPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" data-testid="hero-title">
-                Sheet Metal & Fabrication
+                Custom Metal Sheet & Fabrication Services
               </h1>
               <p className="text-xl text-muted-foreground mb-8" data-testid="hero-description">
-                Complete sheet metal fabrication services from cutting to finishing. We transform raw materials into precision components with professional craftsmanship and attention to detail.
+                Upload your CAD files to get an instant online fabrication quote on custom formed sheet metal prototypes and production parts. Lead times as fast as days and free standard shipping on all US orders.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 

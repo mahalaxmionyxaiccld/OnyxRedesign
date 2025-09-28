@@ -96,10 +96,10 @@ export default function VacuumCastingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" data-testid="hero-title">
-                Vacuum Casting Services
+                Custom Vacuum Casting Service
               </h1>
               <p className="text-xl text-muted-foreground mb-8" data-testid="hero-description">
-                High-quality polyurethane parts through vacuum casting technology. Perfect for prototypes, low-volume production, and complex geometries with superior surface finish.
+                Get instant online vacuum casting service quotes on custom parts in over 80 metal and plastic materials. Order Vacuum Cast items and get Free Shipping on all US orders. ISO 9001:2015, ISO 13485, IATF 16949:2016, and AS9100D certified. ITAR registered.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 

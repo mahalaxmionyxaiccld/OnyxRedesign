@@ -11,23 +11,23 @@ export default function ThreeDPrintingPage() {
   const features = [
     {
       icon: <CheckCircle className="h-6 w-6 text-primary" />,
-      title: "High Precision",
-      description: "Layer resolution down to 0.1mm for precise prototypes and parts"
+      title: "Selective Laser Sintering (SLS)",
+      description: "Quality prototypes and production parts. 1-Day expedite. Free shipping on all US and international orders."
     },
     {
       icon: <Clock className="h-6 w-6 text-primary" />,
-      title: "Fast Turnaround",
-      description: "Most prints completed within 24-48 hours"
+      title: "HP Multi Jet Fusion (MJF)",
+      description: "Quality prototypes and production parts in as little as one day. Free shipping on all US and international orders."
     },
     {
       icon: <Users className="h-6 w-6 text-primary" />,
-      title: "Expert Support",
-      description: "Professional consultation throughout your project"
+      title: "Fused Deposition Modeling (FDM)",
+      description: "High-Quality Large Format FDM 3D Printing 1-Day Expedite Available. Free Shipping on All US and International Orders."
     },
     {
       icon: <Shield className="h-6 w-6 text-primary" />,
-      title: "Quality Assured",
-      description: "Rigorous quality control for every printed part"
+      title: "Stereolithography (SLA)",
+      description: "High-Resolution Prototypes in Days Free shipping on all US 3D printing orders"
     }
   ];
 
@@ -71,10 +71,10 @@ export default function ThreeDPrintingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" data-testid="hero-title">
-                3D Printing Services
+                Custom Online 3D Printing Service
               </h1>
               <p className="text-xl text-muted-foreground mb-8" data-testid="hero-description">
-                Transform your ideas into reality with our advanced 3D printing technology. From rapid prototyping to custom manufacturing, we deliver precision parts with exceptional quality and speed.
+                Get instant online 3D printing service quotes on custom parts in over 80 metal and plastic materials. Order 3D Printed items and get Free Shipping on all US orders. ISO 9001:2015, ISO 13485, IATF 16949:2016, and AS9100D certified. ITAR registered.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
@@ -112,10 +112,10 @@ export default function ThreeDPrintingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6" data-testid="features-title">
-              Why Choose Our 3D Printing Services?
+              Onyx's Online 3D Printing Services: High-Quality Rapid Prototyping and Production Parts
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="features-description">
-              Experience the advantages of working with industry-leading 3D printing technology and expertise.
+              Onyx offers industry-leading 3D printing online services. Whether you need prototypes or production parts, we can make them on demand. We are your one-stop shop for accurate, precise, custom 3D-printed parts at an affordable price.
             </p>
           </div>
 

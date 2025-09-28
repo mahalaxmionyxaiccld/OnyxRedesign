@@ -35,7 +35,7 @@ export default function Navigation() {
             <div className="ml-10 flex items-baseline space-x-8">
               <Link 
                 href="/"
-                className="text-foreground hover:text-primary transition-colors duration-200"
+                className="text-foreground hover:text-primary transition-colors duration-200 nav-link"
                 data-testid="nav-home"
               >
                 Home
@@ -98,28 +98,28 @@ export default function Navigation() {
 
               <Link 
                 href="/blogs"
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 nav-link"
                 data-testid="nav-blogs"
               >
                 Blogs
               </Link>
               <Link 
                 href="/about"
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 nav-link"
                 data-testid="nav-about"
               >
                 About Us
               </Link>
               <Link 
                 href="/contact"
-                className="text-muted-foreground hover:text-primary transition-colors duration-200"
+                className="text-muted-foreground hover:text-primary transition-colors duration-200 nav-link"
                 data-testid="nav-contact"
               >
                 Contact Us
               </Link>
               <Button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-primary text-primary-foreground hover:bg-primary/90"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 btn-hover-scale"
                 data-testid="nav-get-quote"
               >
                 Get Quote

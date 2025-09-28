@@ -79,7 +79,7 @@ export default function MaterialHandlingCranePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground btn-hover-scale"
                   onClick={navigateToContact}
                   data-testid="get-quote-button"
                 >
@@ -89,6 +89,7 @@ export default function MaterialHandlingCranePage() {
                 <Button 
                   size="lg" 
                   variant="outline"
+                  className="btn-hover-scale"
                   onClick={navigateToContact}
                   data-testid="learn-more-button"
                 >
@@ -122,7 +123,7 @@ export default function MaterialHandlingCranePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center p-6 bg-card rounded-lg border shadow-sm hover:shadow-md transition-shadow" data-testid={`feature-${index}`}>
+              <div key={index} className="text-center p-6 bg-card rounded-lg border shadow-sm hover:shadow-md transition-shadow hover-lift landify-card" data-testid={`feature-${index}`}>
                 <div className="flex justify-center mb-4">
                   {feature.icon}
                 </div>

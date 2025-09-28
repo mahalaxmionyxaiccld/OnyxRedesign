@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
+import ScrollReveal from "@/components/scroll-reveal";
 
 export default function HeroSection() {
   const [typedText, setTypedText] = useState("");
@@ -42,20 +43,25 @@ export default function HeroSection() {
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left animate-fadeInUp">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6" data-testid="hero-title">
-              {typedText}
-              {showCursor && <span className="animate-pulse">|</span>}
-            </h1>
-            <p className="text-xl lg:text-2xl text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0" data-testid="hero-description">
-              Turning concepts into tangible, high-quality products
-            </p>
+          <div className="text-center lg:text-left">
+            <div className="animate-fadeInUp" style={{ animationDelay: "0.2s" }}>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 transform hover:scale-105 transition-transform duration-300" data-testid="hero-title">
+                {typedText}
+                {showCursor && <span className="animate-pulse text-primary">|</span>}
+              </h1>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="animate-fadeInUp" style={{ animationDelay: "0.4s" }}>
+              <p className="text-xl lg:text-2xl text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0" data-testid="hero-description">
+                Turning concepts into tangible, high-quality products
+              </p>
+            </div>
+            
+            <div className="animate-fadeInUp flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" style={{ animationDelay: "0.6s" }}>
               <Button 
                 onClick={scrollToContact}
                 size="lg"
-                className="bg-white text-primary px-8 py-4 text-lg font-semibold hover:bg-white/90 transition-all duration-200 hover-lift"
+                className="bg-white text-primary px-8 py-4 text-lg font-semibold hover:bg-white/90 transition-all duration-300 hover-lift transform hover:scale-105 hover:shadow-xl"
                 data-testid="button-get-quote"
               >
                 Get Quote
@@ -64,7 +70,7 @@ export default function HeroSection() {
                 onClick={scrollToContact}
                 variant="outline"
                 size="lg"
-                className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-primary transition-all duration-200"
+                className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
                 data-testid="button-enquire-now"
               >
                 Enquire Now
@@ -72,7 +78,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end animate-fadeIn">
+          <div className="flex justify-center lg:justify-end animate-fadeIn" style={{ animationDelay: "0.8s" }}>
             <div className="relative">
               <img 
                 src="https://static.wixstatic.com/media/adfab1_c9a48dfff8344514998ba29304ee2036~mv2.png/v1/fill/w_980,h_511,al_c,q_90,enc_avif,quality_auto/adfab1_c9a48dfff8344514998ba29304ee2036~mv2.png" 

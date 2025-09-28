@@ -61,7 +61,7 @@ export default function HeroSection() {
                 Get Quote
               </Button>
               <Button 
-                onClick={scrollToAbout}
+                onClick={scrollToContact}
                 variant="outline"
                 size="lg"
                 className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-primary transition-all duration-200"

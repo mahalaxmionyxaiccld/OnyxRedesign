@@ -27,7 +27,7 @@ export default function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center" data-testid="logo">
               <img 
-                src="/attached_assets/logo_1759058611278.webp" 
+                src="https://static.wixstatic.com/media/adfab1_eeead6b3112c43dd9ca556d00240af06~mv2.png/v1/fill/w_370,h_166,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Onyx_Industries-removebg-preview.png" 
                 alt="Onyx Industries" 
                 className="h-12 w-auto"
               />
@@ -87,11 +87,6 @@ export default function Navigation() {
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DropdownMenuItem asChild>
-                    <Link href="/products" className="w-full" data-testid="nav-all-products">
-                      View All Products
-                    </Link>
-                  </DropdownMenuItem>
                   <DropdownMenuItem asChild>
                     <Link href="/products/material-handling-crane" className="w-full" data-testid="nav-material-handling-crane">
                       Material Handling Crane
@@ -211,14 +206,6 @@ export default function Navigation() {
               {/* Mobile Products */}
               <div className="space-y-1">
                 <div className="px-3 py-2 text-muted-foreground font-medium">Products</div>
-                <Link 
-                  href="/products"
-                  className="block px-6 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
-                  data-testid="mobile-nav-all-products"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  View All Products
-                </Link>
                 <Link 
                   href="/products/material-handling-crane"
                   className="block px-6 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"

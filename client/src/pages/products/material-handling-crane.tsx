@@ -8,6 +8,19 @@ export default function MaterialHandlingCranePage() {
     window.location.href = '/#contact';
   };
 
+  const scrollToContact = () => {
+    // Look for various contact/CTA sections on current page
+    const contactElement = document.getElementById('contact') || 
+                          document.querySelector('[data-testid="cta-title"]') ||
+                          document.querySelector('[data-testid="cta-contact-button"]')?.closest('section');
+    
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.location.href = '/#contact';
+    }
+  };
+
   const features = [
     {
       icon: <CheckCircle className="h-6 w-6 text-primary" />,
@@ -80,7 +93,7 @@ export default function MaterialHandlingCranePage() {
                 <Button 
                   size="lg" 
                   className="bg-primary hover:bg-primary/90 text-primary-foreground btn-hover-scale"
-                  onClick={navigateToContact}
+                  onClick={scrollToContact}
                   data-testid="get-quote-button"
                 >
                   Get Quote
@@ -90,7 +103,7 @@ export default function MaterialHandlingCranePage() {
                   size="lg" 
                   variant="outline"
                   className="btn-hover-scale"
-                  onClick={navigateToContact}
+                  onClick={scrollToContact}
                   data-testid="learn-more-button"
                 >
                   Learn More
@@ -186,7 +199,7 @@ export default function MaterialHandlingCranePage() {
                 <p className="text-muted-foreground mb-6">{app.description}</p>
                 <Button 
                   variant="outline" 
-                  onClick={navigateToContact}
+                  onClick={scrollToContact}
                   data-testid={`application-contact-${index}`}
                 >
                   Learn More

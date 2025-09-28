@@ -8,61 +8,78 @@ export default function SoftwareServicesPage() {
     window.location.href = '/#contact';
   };
 
+  const scrollToContact = () => {
+    // Look for various contact/CTA sections on current page
+    const contactElement = document.getElementById('contact') || 
+                          document.querySelector('[data-testid="cta-title"]') ||
+                          document.querySelector('[data-testid="cta-contact-button"]')?.closest('section');
+    
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.location.href = '/#contact';
+    }
+  };
+
   const features = [
     {
       icon: <Code className="h-6 w-6 text-primary" />,
-      title: "Custom Software Development",
-      description: "Tailored software solutions built to meet your specific manufacturing and industrial requirements"
+      title: "AI-Powered Manufacturing Systems",
+      description: "Intelligent software leveraging GenAI and Machine Learning to automate quality control, predictive maintenance, and process optimization"
     },
     {
       icon: <Cloud className="h-6 w-6 text-primary" />,
-      title: "Cloud Integration",
-      description: "Seamless cloud-based solutions for data management, monitoring, and remote operations"
+      title: "Cloud-Native Manufacturing Platforms",
+      description: "Scalable cloud solutions for real-time production monitoring, supply chain management, and cross-facility coordination"
     },
     {
       icon: <Database className="h-6 w-6 text-primary" />,
-      title: "Data Analytics & Reporting",
-      description: "Advanced analytics platforms for production optimization and performance monitoring"
+      title: "Advanced Manufacturing Analytics",
+      description: "ML-driven analytics for production optimization, demand forecasting, and intelligent resource allocation"
     },
     {
       icon: <Shield className="h-6 w-6 text-primary" />,
-      title: "Industrial IoT Solutions",
-      description: "Connected manufacturing systems with real-time monitoring and predictive maintenance"
+      title: "Industrial Automation & IoT",
+      description: "Smart factory solutions with AI-enabled sensors, automated workflows, and predictive maintenance systems"
     }
   ];
 
   const services = [
     {
-      title: "Manufacturing Execution Systems (MES)",
-      description: "Complete MES solutions for production tracking, quality control, and workflow optimization",
+      title: "GenAI-Powered Manufacturing Systems",
+      description: "Revolutionary AI systems that use generative AI for automated quality inspection, process optimization, and intelligent production scheduling with real-time adaptability",
       image: "https://static.wixstatic.com/media/adfab1_ddfd068904b642dabafdfb29ae9751fc~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/manufacture.png"
     },
     {
-      title: "Enterprise Resource Planning (ERP)",
-      description: "Integrated ERP systems for streamlined business operations and resource management",
+      title: "Machine Learning Production Analytics",
+      description: "Advanced ML algorithms for predictive maintenance, demand forecasting, supply chain optimization, and automated defect detection with continuous learning capabilities",
       image: "https://static.wixstatic.com/media/adfab1_7bb6f0157fe34bd29b16dff423962f14~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/blueprint.png"
     },
     {
-      title: "SCADA Systems",
-      description: "Supervisory control and data acquisition systems for industrial process monitoring",
+      title: "Cloud-Native Manufacturing Platforms",
+      description: "Scalable cloud infrastructure for multi-facility coordination, real-time data synchronization, remote monitoring, and seamless integration with existing manufacturing systems",
       image: "https://static.wixstatic.com/media/adfab1_ddfd068904b642dabafdfb29ae9751fc~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/manufacture.png"
     },
     {
-      title: "Maintenance Management Systems",
-      description: "Comprehensive maintenance scheduling and asset management solutions",
+      title: "Smart Factory Web Applications",
+      description: "Modern web-based interfaces for production control, workforce management, inventory tracking, and executive dashboards with mobile-responsive design and real-time updates",
       image: "https://static.wixstatic.com/media/adfab1_7bb6f0157fe34bd29b16dff423962f14~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/blueprint.png"
     }
   ];
 
   const technologies = [
-    "Industrial IoT Platforms",
-    "Cloud Computing (AWS, Azure, Google Cloud)",
-    "Real-time Data Processing",
-    "Machine Learning & AI",
-    "Mobile Applications",
-    "Web-based Dashboards",
-    "API Development & Integration",
-    "Database Management Systems"
+    "Generative AI & Large Language Models (LLMs)",
+    "Machine Learning & Deep Learning (TensorFlow, PyTorch)",
+    "Cloud Platforms (AWS, Azure, Google Cloud)",
+    "Industrial IoT & Edge Computing",
+    "Real-time Data Processing & Analytics",
+    "Computer Vision for Quality Control",
+    "React/Next.js Web Applications",
+    "Mobile Applications (React Native, Flutter)",
+    "API Development & Microservices",
+    "Database Systems (PostgreSQL, MongoDB)",
+    "DevOps & CI/CD Pipelines",
+    "Blockchain for Supply Chain Traceability"
   ];
 
   return (
@@ -75,16 +92,16 @@ export default function SoftwareServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6" data-testid="hero-title">
-                Software Services
+                Intelligent Manufacturing Software Solutions
               </h1>
               <p className="text-xl text-muted-foreground mb-8" data-testid="hero-description">
-                Comprehensive software solutions for modern manufacturing. From custom applications to enterprise systems, we deliver technology that drives efficiency and innovation in industrial operations.
+                Transform your manufacturing operations with cutting-edge AI-powered software solutions. Our expert team develops intelligent systems using GenAI, Machine Learning, and Cloud technologies to automate processes, optimize production, and drive digital transformation in manufacturing.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
                   className="bg-primary hover:bg-primary/90 text-primary-foreground btn-hover-scale"
-                  onClick={navigateToContact}
+                  onClick={scrollToContact}
                   data-testid="get-quote-button"
                 >
                   Get Quote
@@ -94,7 +111,7 @@ export default function SoftwareServicesPage() {
                   size="lg" 
                   variant="outline"
                   className="btn-hover-scale"
-                  onClick={navigateToContact}
+                  onClick={scrollToContact}
                   data-testid="learn-more-button"
                 >
                   Learn More
@@ -165,7 +182,7 @@ export default function SoftwareServicesPage() {
                     <p className="text-muted-foreground mb-6">{service.description}</p>
                     <Button 
                       variant="outline" 
-                      onClick={navigateToContact}
+                      onClick={scrollToContact}
                       className="btn-hover-scale"
                       data-testid={`service-contact-${index}`}
                     >

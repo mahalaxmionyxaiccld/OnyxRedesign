@@ -4,14 +4,14 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
 import { Mail, Phone, MapPin } from "lucide-react";
-import type { InsertContactSubmission } from "@shared/schema";
+import type { ContactFormData } from "@shared/schema";
+import { contactFormSchema } from "@shared/schema";
 
 export default function ContactSection() {
   const { toast } = useToast();
-  const [formData, setFormData] = useState<InsertContactSubmission>({
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState<ContactFormData>({
     firstName: "",
     lastName: "",
     companyName: "",
@@ -20,16 +20,62 @@ export default function ContactSection() {
     requirements: ""
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContactSubmission) => {
-      const response = await apiRequest("POST", "/api/contact", data);
-      return response.json();
-    },
-    onSuccess: (data) => {
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Validate form data
+    const validation = contactFormSchema.safeParse(formData);
+    if (!validation.success) {
+      toast({
+        title: "Error",
+        description: "Please fill in all required fields correctly.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Get Google Apps Script URL from environment variable
+      const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
+      
+      if (!scriptUrl) {
+        toast({
+          title: "Configuration Error",
+          description: "Google Sheets integration is not configured. Please see README.md for setup instructions.",
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Submit to Google Sheets via Apps Script
+      const response = await fetch(scriptUrl, {
+        method: "POST",
+        mode: "no-cors", // Google Apps Script requires no-cors mode
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName: formData.firstName,
+          lastName: formData.lastName || "",
+          companyName: formData.companyName || "",
+          phone: formData.phone || "",
+          email: formData.email,
+          requirements: formData.requirements || "",
+          timestamp: new Date().toISOString(),
+        }),
+      });
+
+      // Note: With no-cors mode, we can't read the response
+      // Assume success if no error is thrown
       toast({
         title: "Success!",
-        description: data.message,
+        description: "Thank you for your inquiry. We will get back to you soon!",
       });
+
+      // Reset form
       setFormData({
         firstName: "",
         lastName: "",
@@ -38,31 +84,19 @@ export default function ContactSection() {
         email: "",
         requirements: ""
       });
-    },
-    onError: (error) => {
+    } catch (error) {
       toast({
         title: "Error",
-        description: "Something went wrong. Please try again.",
+        description: "Something went wrong. Please try again or contact us directly.",
         variant: "destructive",
       });
       console.error("Contact form error:", error);
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.firstName || !formData.email) {
-      toast({
-        title: "Error",
-        description: "Please fill in all required fields.",
-        variant: "destructive",
-      });
-      return;
+    } finally {
+      setIsSubmitting(false);
     }
-    contactMutation.mutate(formData);
   };
 
-  const handleInputChange = (field: keyof InsertContactSubmission, value: string) => {
+  const handleInputChange = (field: keyof ContactFormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
@@ -206,10 +240,10 @@ export default function ContactSection() {
               <Button 
                 type="submit" 
                 className="w-full bg-primary text-primary-foreground py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
-                disabled={contactMutation.isPending}
+                disabled={isSubmitting}
                 data-testid="button-submit"
               >
-                {contactMutation.isPending ? "Submitting..." : "Submit"}
+                {isSubmitting ? "Submitting..." : "Submit"}
               </Button>
             </form>
           </div>

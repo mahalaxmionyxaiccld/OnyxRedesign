@@ -1,20 +1,17 @@
-import { type User, type InsertUser, type ContactSubmission, type InsertContactSubmission } from "@shared/schema";
+import { type User, type InsertUser } from "@shared/schema";
 import { randomUUID } from "crypto";
 
 export interface IStorage {
   getUser(id: string): Promise<User | undefined>;
   getUserByUsername(username: string): Promise<User | undefined>;
   createUser(user: InsertUser): Promise<User>;
-  createContactSubmission(submission: InsertContactSubmission): Promise<ContactSubmission>;
 }
 
 export class MemStorage implements IStorage {
   private users: Map<string, User>;
-  private contactSubmissions: Map<string, ContactSubmission>;
 
   constructor() {
     this.users = new Map();
-    this.contactSubmissions = new Map();
   }
 
   async getUser(id: string): Promise<User | undefined> {
@@ -32,22 +29,6 @@ export class MemStorage implements IStorage {
     const user: User = { ...insertUser, id };
     this.users.set(id, user);
     return user;
-  }
-
-  async createContactSubmission(insertSubmission: InsertContactSubmission): Promise<ContactSubmission> {
-    const id = randomUUID();
-    const submission: ContactSubmission = { 
-      firstName: insertSubmission.firstName,
-      lastName: insertSubmission.lastName || null,
-      companyName: insertSubmission.companyName || null,
-      phone: insertSubmission.phone || null,
-      email: insertSubmission.email,
-      requirements: insertSubmission.requirements || null,
-      id,
-      createdAt: new Date()
-    };
-    this.contactSubmissions.set(id, submission);
-    return submission;
   }
 }
 

@@ -1,5 +1,21 @@
 import { Switch, Route, Router as WouterRouter } from "wouter";
-// ... imports
+import { queryClient } from "./lib/queryClient";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { Toaster } from "@/components/ui/toaster";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import Home from "@/pages/home";
+import ThreeDPrintingPage from "@/pages/offerings/3d-printing";
+import MachiningPage from "@/pages/offerings/machining";
+import SheetMetalPage from "@/pages/offerings/sheet-metal";
+import VacuumCastingPage from "@/pages/offerings/vacuum-casting";
+import FabricationPage from "@/pages/offerings/fabrication";
+import ProductsPage from "@/pages/products";
+import BlogsPage from "@/pages/blogs";
+import AboutPage from "@/pages/about";
+import ContactPage from "@/pages/contact";
+import MaterialHandlingCranePage from "@/pages/products/material-handling-crane";
+import SoftwareServicesPage from "@/pages/products/software-services";
+import NotFound from "@/pages/not-found";
 
 function Router() {
   return (

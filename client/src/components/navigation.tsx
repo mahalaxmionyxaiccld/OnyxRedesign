@@ -16,6 +16,8 @@ export default function Navigation() {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      window.location.href = `/#${sectionId}`;
     }
     setIsMenuOpen(false);
   };
@@ -26,18 +28,18 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center">
             <Link href="/" className="flex items-center" data-testid="logo">
-              <img 
-                src="https://static.wixstatic.com/media/adfab1_eeead6b3112c43dd9ca556d00240af06~mv2.png/v1/fill/w_370,h_166,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Onyx_Industries-removebg-preview.png" 
-                alt="Onyx Industries" 
+              <img
+                src="https://static.wixstatic.com/media/adfab1_eeead6b3112c43dd9ca556d00240af06~mv2.png/v1/fill/w_370,h_166,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Onyx_Industries-removebg-preview.png"
+                alt="Onyx Industries"
                 className="h-12 w-auto"
               />
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              <Link 
+              <Link
                 href="/"
                 className="text-foreground hover:text-primary transition-colors duration-200 nav-link"
                 data-testid="nav-home"
@@ -100,28 +102,28 @@ export default function Navigation() {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <Link 
+              <Link
                 href="/blogs"
                 className="text-muted-foreground hover:text-primary transition-colors duration-200 nav-link"
                 data-testid="nav-blogs"
               >
                 Blogs
               </Link>
-              <Link 
+              <Link
                 href="/about"
                 className="text-muted-foreground hover:text-primary transition-colors duration-200 nav-link"
                 data-testid="nav-about"
               >
                 About Us
               </Link>
-              <Link 
+              <Link
                 href="/contact"
                 className="text-muted-foreground hover:text-primary transition-colors duration-200 nav-link"
                 data-testid="nav-contact"
               >
                 Contact Us
               </Link>
-              <Button 
+              <Button
                 onClick={() => scrollToSection('contact')}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 btn-hover-scale"
                 data-testid="nav-get-quote"
@@ -149,7 +151,7 @@ export default function Navigation() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background/95 backdrop-blur-sm border-t border-border">
-              <Link 
+              <Link
                 href="/"
                 className="block px-3 py-2 text-foreground hover:text-primary transition-colors duration-200 w-full text-left"
                 data-testid="mobile-nav-home"
@@ -157,11 +159,11 @@ export default function Navigation() {
               >
                 Home
               </Link>
-              
+
               {/* Mobile Offerings */}
               <div className="space-y-1">
                 <div className="px-3 py-2 text-muted-foreground font-medium">Offerings</div>
-                <Link 
+                <Link
                   href="/offerings/3d-printing"
                   className="block px-6 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
                   data-testid="mobile-nav-3d-printing"
@@ -169,7 +171,7 @@ export default function Navigation() {
                 >
                   3D Printing Services
                 </Link>
-                <Link 
+                <Link
                   href="/offerings/machining"
                   className="block px-6 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
                   data-testid="mobile-nav-machining"
@@ -177,7 +179,7 @@ export default function Navigation() {
                 >
                   Machining
                 </Link>
-                <Link 
+                <Link
                   href="/offerings/sheet-metal"
                   className="block px-6 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
                   data-testid="mobile-nav-sheet-metal"
@@ -185,7 +187,7 @@ export default function Navigation() {
                 >
                   Sheet Metal & Fabrication
                 </Link>
-                <Link 
+                <Link
                   href="/offerings/vacuum-casting"
                   className="block px-6 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
                   data-testid="mobile-nav-vacuum-casting"
@@ -193,7 +195,7 @@ export default function Navigation() {
                 >
                   Vacuum Casting
                 </Link>
-                <Link 
+                <Link
                   href="/offerings/fabrication"
                   className="block px-6 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
                   data-testid="mobile-nav-fabrication"
@@ -206,7 +208,7 @@ export default function Navigation() {
               {/* Mobile Products */}
               <div className="space-y-1">
                 <div className="px-3 py-2 text-muted-foreground font-medium">Products</div>
-                <Link 
+                <Link
                   href="/products/material-handling-crane"
                   className="block px-6 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
                   data-testid="mobile-nav-material-handling-crane"
@@ -214,7 +216,7 @@ export default function Navigation() {
                 >
                   Material Handling Crane
                 </Link>
-                <Link 
+                <Link
                   href="/products/software-services"
                   className="block px-6 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
                   data-testid="mobile-nav-software-services"
@@ -224,7 +226,7 @@ export default function Navigation() {
                 </Link>
               </div>
 
-              <Link 
+              <Link
                 href="/blogs"
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
                 data-testid="mobile-nav-blogs"
@@ -232,7 +234,7 @@ export default function Navigation() {
               >
                 Blogs
               </Link>
-              <Link 
+              <Link
                 href="/about"
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
                 data-testid="mobile-nav-about"
@@ -240,7 +242,7 @@ export default function Navigation() {
               >
                 About Us
               </Link>
-              <Link 
+              <Link
                 href="/contact"
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-colors duration-200"
                 data-testid="mobile-nav-contact"
@@ -248,7 +250,7 @@ export default function Navigation() {
               >
                 Contact Us
               </Link>
-              <Button 
+              <Button
                 onClick={() => scrollToSection('contact')}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 w-full mt-2"
                 data-testid="mobile-nav-get-quote"

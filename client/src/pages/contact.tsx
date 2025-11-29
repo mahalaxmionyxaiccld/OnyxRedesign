@@ -11,7 +11,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-to-br from-primary/10 via-background to-secondary/5 pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -23,8 +23,8 @@ export default function ContactPage() {
             Ready to start your next manufacturing project? Get in touch with our team of experts for personalized consultation and quotes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
               onClick={navigateToHomeContact}
               data-testid="contact-form-button"
@@ -55,8 +55,8 @@ export default function ContactPage() {
               <p className="text-muted-foreground mb-4">
                 Send us a detailed message about your project requirements
               </p>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 onClick={navigateToHomeContact}
                 data-testid="email-button"
               >
@@ -70,7 +70,7 @@ export default function ContactPage() {
               <p className="text-muted-foreground mb-4">
                 Speak directly with our technical experts
               </p>
-              <Button 
+              <Button
                 variant="outline"
                 onClick={navigateToHomeContact}
                 data-testid="phone-button"
@@ -85,7 +85,7 @@ export default function ContactPage() {
               <p className="text-muted-foreground mb-4">
                 Schedule a consultation at our facility
               </p>
-              <Button 
+              <Button
                 variant="outline"
                 onClick={navigateToHomeContact}
                 data-testid="visit-button"

@@ -22,7 +22,7 @@ export default function ContactSection() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validate form data
     const validation = contactFormSchema.safeParse(formData);
     if (!validation.success) {
@@ -39,7 +39,7 @@ export default function ContactSection() {
     try {
       // Get Google Apps Script URL from environment variable
       const scriptUrl = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
-      
+
       if (!scriptUrl) {
         toast({
           title: "Configuration Error",
@@ -114,13 +114,13 @@ export default function ContactSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <img 
-              src="https://static.wixstatic.com/media/adfab1_79923954fca64f04be85e32093e6a856~mv2.png/v1/crop/x_65,y_0,w_1215,h_853/fill/w_743,h_522,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/three-collegues-working-car-showroom-Photoroom.png" 
-              alt="Professional team collaboration and consultation meeting" 
+            <img
+              src="https://static.wixstatic.com/media/adfab1_79923954fca64f04be85e32093e6a856~mv2.png/v1/crop/x_65,y_0,w_1215,h_853/fill/w_743,h_522,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/three-collegues-working-car-showroom-Photoroom.png"
+              alt="Professional team collaboration and consultation meeting"
               className="rounded-2xl shadow-lg w-full h-auto landify-card"
               data-testid="contact-image"
             />
-            
+
             <div className="mt-8 space-y-6">
               <div className="flex items-center space-x-4" data-testid="contact-email">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
@@ -128,7 +128,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="font-semibold">Email Us</div>
-                  <div className="text-muted-foreground">info@onyxindustries.com</div>
+                  <div className="text-muted-foreground">support@onyxindustries.co.in</div>
                 </div>
               </div>
               <div className="flex items-center space-x-4" data-testid="contact-phone">
@@ -137,7 +137,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="font-semibold">Call Us</div>
-                  <div className="text-muted-foreground">+1 (555) 123-4567</div>
+                  <div className="text-muted-foreground">+91-8459383263 / +91-7999829720</div>
                 </div>
               </div>
               <div className="flex items-center space-x-4" data-testid="contact-address">
@@ -146,7 +146,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="font-semibold">Visit Us</div>
-                  <div className="text-muted-foreground">123 Industrial Ave, Manufacturing District</div>
+                  <div className="text-muted-foreground">T188/6, MIDC, Bhosari, Pune 411026 Behind Faurecia company</div>
                 </div>
               </div>
             </div>
@@ -237,8 +237,8 @@ export default function ContactSection() {
                   data-testid="textarea-requirements"
                 />
               </div>
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 className="w-full bg-primary text-primary-foreground py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-200"
                 disabled={isSubmitting}
                 data-testid="button-submit"

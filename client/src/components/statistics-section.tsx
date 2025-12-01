@@ -16,7 +16,7 @@ export default function StatisticsSection() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{
           backgroundImage:
-            "url('https://static.wixstatic.com/media/11062b_272ff3e288454249898a9a003c68d689f000.jpg/v1/fill/w_1919,h_830,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/11062b_272ff3e288454249898a9a003c68d689f000.jpg')",
+            "url('11062b_272ff3e288454249898a9a003c68d689f000.avif')",
         }}
       />
       {/* Geometric Pattern Overlay */}

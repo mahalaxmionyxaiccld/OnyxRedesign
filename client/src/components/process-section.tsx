@@ -3,17 +3,17 @@ import { Button } from "@/components/ui/button";
 export default function ProcessSection() {
   const steps = [
     {
-      icon: "https://static.wixstatic.com/media/adfab1_7bb6f0157fe34bd29b16dff423962f14~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/blueprint.png",
+      icon: "blueprint.avif",
       title: "You Design",
       description: "Share your concept, and we'll refine it for optimal production."
     },
     {
-      icon: "https://static.wixstatic.com/media/adfab1_ddfd068904b642dabafdfb29ae9751fc~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/manufacture.png",
+      icon: "manufacture.avif",
       title: "We Manufacture",
       description: "Using cutting-edge technology, we bring your design to life with precision."
     },
     {
-      icon: "https://static.wixstatic.com/media/adfab1_7bb6f0157fe34bd29b16dff423962f14~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/blueprint.png",
+      icon: "blueprint.avif",
       title: "Delivery On-Time",
       description: "High-quality, production-ready parts, shipped with speed and reliability."
     }
@@ -42,8 +42,8 @@ export default function ProcessSection() {
           {steps.map((step, index) => (
             <div key={index} className="process-step text-center" data-testid={`process-step-${index}`}>
               <div className="w-32 h-32 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-8 landify-card">
-                <img 
-                  src={step.icon} 
+                <img
+                  src={step.icon}
                   alt={`${step.title} process icon`}
                   className="w-20 h-20 object-contain"
                 />
@@ -59,7 +59,7 @@ export default function ProcessSection() {
         </div>
 
         <div className="text-center mt-16">
-          <Button 
+          <Button
             onClick={scrollToContact}
             size="lg"
             className="bg-primary text-primary-foreground px-10 py-4 text-lg font-semibold hover:bg-primary/90 transition-all duration-200 hover-lift"

@@ -2,28 +2,43 @@ export default function ClientLogosSection() {
   const clientLogos = [
     {
       id: 1,
-      src: "https://static.wixstatic.com/media/a3c153_694bc34e396646218d96228b187ed4d5~mv2.png/v1/fill/w_150,h_150,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo%201.png",
-      alt: "Client partner logo 1"
+      name: "BOBST India"
     },
     {
       id: 2,
-      src: "https://static.wixstatic.com/media/a3c153_3952fdce0a414a82aac8856bda6df67b~mv2.png/v1/fill/w_150,h_150,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo%202.png",
-      alt: "Client partner logo 2"
+      name: "Mahindra & Mahindra"
     },
     {
       id: 3,
-      src: "https://static.wixstatic.com/media/a3c153_8fcae36c9c7943e1aedb144c75248951~mv2.png/v1/fill/w_150,h_150,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo%203.png",
-      alt: "Client partner logo 3"
+      name: "ONGC"
     },
     {
       id: 4,
-      src: "https://static.wixstatic.com/media/a3c153_6f0dd109133d4836abd7eada38ce8748~mv2.png/v1/fill/w_150,h_150,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo%204.png",
-      alt: "Client partner logo 4"
+      name: "Mag9"
     },
     {
       id: 5,
-      src: "https://static.wixstatic.com/media/a3c153_037f2efc2b034aabac0efeb3d7a18919~mv2.png/v1/fill/w_150,h_150,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo%205.png",
-      alt: "Client partner logo 5"
+      name: "BBS Automation"
+    },
+    {
+      id: 6,
+      name: "Ecoppia Scientific LLP"
+    },
+    {
+      id: 7,
+      name: "Packam Controls"
+    },
+    {
+      id: 8,
+      name: "Infinity Automation Systems pvt ltd"
+    },
+    {
+      id: 9,
+      name: "Milcon Engineers"
+    },
+    {
+      id: 10,
+      name: "SSIG"
     }
   ];
 
@@ -42,11 +57,7 @@ export default function ClientLogosSection() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 items-center justify-items-center">
           {clientLogos.map((logo) => (
             <div key={logo.id} className="flex justify-center items-center" data-testid={`client-logo-${logo.id}`}>
-              <img 
-                src={logo.src}
-                alt={logo.alt}
-                className="w-20 h-20 lg:w-24 lg:h-24 object-contain opacity-60 hover:opacity-100 transition-opacity duration-300 landify-card"
-              />
+              <p className="text-lg font-bold text-foreground" data-testid={`client-name-${logo.id}`}>{logo.name}</p>
             </div>
           ))}
         </div>

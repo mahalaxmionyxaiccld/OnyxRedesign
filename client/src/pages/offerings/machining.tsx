@@ -40,26 +40,26 @@ export default function MachiningPage() {
       title: "CNC Milling",
       description: "Precision milling for complex parts and prototypes",
       image:
-        "https://static.wixstatic.com/media/adfab1_ddfd068904b642dabafdfb29ae9751fc~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/manufacture.png",
+        "manufacture.avif",
     },
     {
       title: "CNC Turning",
       description:
         "High-precision turning for cylindrical and rotational parts",
       image:
-        "https://static.wixstatic.com/media/adfab1_7bb6f0157fe34bd29b16dff423962f14~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/blueprint.png",
+        "blueprint.avif",
     },
     {
       title: "Swiss Machining",
       description: "Ultra-precise machining for small, complex components",
       image:
-        "https://static.wixstatic.com/media/adfab1_ddfd068904b642dabafdfb29ae9751fc~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/manufacture.png",
+        "manufacture.avif",
     },
     {
       title: "Surface Finishing",
       description: "Professional finishing including anodizing and coating",
       image:
-        "https://static.wixstatic.com/media/adfab1_7bb6f0157fe34bd29b16dff423962f14~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/blueprint.png",
+        "blueprint.avif",
     },
   ];
 

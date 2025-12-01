@@ -3,22 +3,16 @@ import { Star } from "lucide-react";
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Sandeep Pandey",
-      role: "CMO, Darzi Company",
       content: "We use only the highest-quality materials to ensure your products are built to last, no matter the industry or application. Their attention to detail and commitment to excellence is unmatched.",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
+      avatar: "profile.png"
     },
     {
-      name: "Sandeep Pandey",
-      role: "CMO, Darzi Company",
       content: "Outstanding service and incredible precision in manufacturing. Onyx Industries has transformed our product development process with their innovative solutions and reliable delivery.",
-      avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
+      avatar: "profile.png"
     },
     {
-      name: "Sandeep Pandey",
-      role: "CMO, Darzi Company",
       content: "The team at Onyx Industries goes above and beyond to ensure project success. Their expertise in advanced manufacturing and commitment to quality is truly impressive.",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100"
+      avatar: "profile.png"
     }
   ];
 
@@ -49,19 +43,14 @@ export default function TestimonialsSection() {
                 "{testimonial.content}"
               </p>
               <div className="flex items-center">
-                <img 
-                  src={testimonial.avatar} 
-                  alt={`${testimonial.name} headshot`} 
+                <img
+                  src={testimonial.avatar}
+                  alt={`headshot`}
                   className="w-12 h-12 rounded-full mr-4"
                   data-testid={`testimonial-avatar-${index}`}
                 />
                 <div>
-                  <div className="font-semibold" data-testid={`testimonial-name-${index}`}>
-                    {testimonial.name}
-                  </div>
-                  <div className="text-sm text-muted-foreground" data-testid={`testimonial-role-${index}`}>
-                    {testimonial.role}
-                  </div>
+
                 </div>
               </div>
             </div>

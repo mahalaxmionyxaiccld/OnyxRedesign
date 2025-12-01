@@ -29,7 +29,7 @@ export default function Navigation() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center" data-testid="logo">
               <img
-                src="https://static.wixstatic.com/media/adfab1_eeead6b3112c43dd9ca556d00240af06~mv2.png/v1/fill/w_370,h_166,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Onyx_Industries-removebg-preview.png"
+                src="Onyx_Industries-removebg-preview.avif"
                 alt="Onyx Industries"
                 className="h-12 w-auto"
               />

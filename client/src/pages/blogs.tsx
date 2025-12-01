@@ -6,17 +6,17 @@ import { useState } from "react";
 
 export default function BlogsPage() {
   const [selectedArticle, setSelectedArticle] = useState<number | null>(null);
-  
+
   const navigateToContact = () => {
     window.location.href = '/#contact';
   };
-  
+
   const articles = [
     {
       id: 1,
       title: "The Future of AI in Precision Manufacturing",
       excerpt: "Explore how artificial intelligence and machine learning are revolutionizing precision manufacturing processes, from automated quality control to predictive maintenance systems.",
-      image: "https://static.wixstatic.com/media/adfab1_ddfd068904b642dabafdfb29ae9751fc~mv2.png/v1/fill/w_400,h_250,al_c,q_90,enc_avif,quality_auto/manufacture.png",
+      image: "manufacture.avif",
       author: "Dr. Sarah Chen",
       date: "December 15, 2024",
       readTime: "8 min read",
@@ -45,7 +45,7 @@ export default function BlogsPage() {
       id: 2,
       title: "3D Printing Materials: Beyond Plastics to Metal Innovation",
       excerpt: "Discover the latest advances in 3D printing materials, including metal alloys, ceramics, and composite materials that are expanding the possibilities of additive manufacturing.",
-      image: "https://static.wixstatic.com/media/adfab1_c9a48dfff8344514998ba29304ee2036~mv2.png/v1/fill/w_400,h_250,al_c,q_90,enc_avif,quality_auto/adfab1_c9a48dfff8344514998ba29304ee2036~mv2.png",
+      image: "adfab1_c9a48dfff8344514998ba29304ee2036~mv2.avif",
       author: "James Rodriguez",
       date: "November 28, 2024",
       readTime: "6 min read",
@@ -74,7 +74,7 @@ export default function BlogsPage() {
       id: 3,
       title: "Sustainable Manufacturing: Green Technologies and Practices",
       excerpt: "Learn how modern manufacturing is embracing sustainability through energy-efficient processes, waste reduction strategies, and circular economy principles.",
-      image: "https://static.wixstatic.com/media/adfab1_7c66b809a6124ca1973a2e4c46975790~mv2.jpg/v1/fill/w_400,h_250,al_c,q_85,enc_avif,quality_auto/freepik__upload__49441.jpg",
+      image: "freepik__upload__49441.avif",
       author: "Maria Gonzalez",
       date: "November 10, 2024",
       readTime: "7 min read",
@@ -104,7 +104,7 @@ export default function BlogsPage() {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-to-br from-primary/10 via-background to-secondary/5 pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -116,8 +116,8 @@ export default function BlogsPage() {
             Stay informed with the latest industry trends, manufacturing insights, and technical articles from our team of experts.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
               onClick={navigateToContact}
               data-testid="subscribe-button"
@@ -135,13 +135,13 @@ export default function BlogsPage() {
           {selectedArticle === null ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {articles.map((article, index) => (
-                <article 
+                <article
                   key={article.id}
                   className="bg-card rounded-xl shadow-sm border border-border/50 overflow-hidden hover-lift landify-card cursor-pointer transition-all duration-300"
                   onClick={() => setSelectedArticle(article.id)}
                   data-testid={`article-card-${index}`}
                 >
-                  <img 
+                  <img
                     src={article.image}
                     alt={article.title}
                     className="w-full h-48 object-cover"
@@ -176,8 +176,8 @@ export default function BlogsPage() {
                 if (!article) return null;
                 return (
                   <div>
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       onClick={() => setSelectedArticle(null)}
                       className="mb-8"
                       data-testid="back-to-articles"
@@ -185,7 +185,7 @@ export default function BlogsPage() {
                       ← Back to Articles
                     </Button>
                     <article className="bg-card rounded-xl p-8 shadow-sm border border-border/50">
-                      <img 
+                      <img
                         src={article.image}
                         alt={article.title}
                         className="w-full h-64 object-cover rounded-lg mb-8"
@@ -221,7 +221,7 @@ export default function BlogsPage() {
                           <p className="text-muted-foreground mb-6">
                             Contact us to learn more about how these technologies can benefit your manufacturing processes.
                           </p>
-                          <Button 
+                          <Button
                             size="lg"
                             onClick={navigateToContact}
                             className="bg-primary hover:bg-primary/90 text-primary-foreground"

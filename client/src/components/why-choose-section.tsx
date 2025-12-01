@@ -1,22 +1,22 @@
 export default function WhyChooseSection() {
   const features = [
     {
-      icon: "https://static.wixstatic.com/media/adfab1_ced8106a499a49b68542b462e7ca15e3~mv2.png/v1/fill/w_60,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/3d-printing.png",
+      icon: "3d-printing.avif",
       title: "Cutting-Edge Technology",
       description: "Experience the power of advanced 3D printing and precision manufacturing to bring your ideas to life."
     },
     {
-      icon: "https://static.wixstatic.com/media/adfab1_8455ab35f7a94877bbda6c5add7fcce0~mv2.png/v1/fill/w_60,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/settings.png",
+      icon: "settings.avif",
       title: "Best-in-Class Service",
       description: "Our team is dedicated to delivering a seamless experience, with personalized support at every stage of your project."
     },
     {
-      icon: "https://static.wixstatic.com/media/adfab1_263eca911a5649ffb665087d426d77a1~mv2.png/v1/fill/w_60,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/advanced.png",
+      icon: "advanced.avif",
       title: "Durable Materials",
       description: "We use only the highest-quality materials to ensure your products are built to last, no matter the industry or application."
     },
     {
-      icon: "https://static.wixstatic.com/media/adfab1_85eb1092b9304abc91924ee8ebd53c5d~mv2.png/v1/fill/w_60,h_60,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/engineer.png",
+      icon: "engineer.avif",
       title: "Years of Expertise",
       description: "With decades of industry knowledge, we provide unmatched insights and solutions tailored to your specific needs."
     }
@@ -39,14 +39,14 @@ export default function WhyChooseSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {features.map((feature, index) => (
-            <div 
+            <div
               key={index}
               className="bg-card p-8 rounded-xl shadow-sm border border-border/50 hover-lift text-center landify-card"
               data-testid={`feature-card-${index}`}
             >
               <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                <img 
-                  src={feature.icon} 
+                <img
+                  src={feature.icon}
                   alt={`${feature.title} icon`}
                   className="w-16 h-16 object-contain"
                 />
@@ -63,9 +63,9 @@ export default function WhyChooseSection() {
 
         <div className="text-center">
           <div className="relative">
-            <img 
-              src="https://static.wixstatic.com/media/nsplsh_73faf9a541af42759dd526f52a1982d7~mv2.jpg/v1/fill/w_505,h_647,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image%20by%20Maksym%20Kaharlytskyi.jpg" 
-              alt="Manufacturing possibilities showcase with various advanced products" 
+            <img
+              src="ImagebyMaksymKaharlytskyi.avif"
+              alt="Manufacturing possibilities showcase with various advanced products"
               className="rounded-2xl shadow-lg w-full h-auto max-w-2xl mx-auto landify-card"
               data-testid="possibilities-image"
             />

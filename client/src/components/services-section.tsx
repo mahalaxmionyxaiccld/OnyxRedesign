@@ -19,15 +19,15 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <ScrollReveal delay={200}>
             <div className="order-2 lg:order-1">
-              <img 
-                src="https://static.wixstatic.com/media/11062b_272ff3e288454249898a9a003c68d689f000.jpg/v1/fill/w_1919,h_830,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/11062b_272ff3e288454249898a9a003c68d689f000.jpg" 
-                alt="Modern industrial manufacturing facility showcasing advanced machinery" 
+              <img
+                src="11062b_272ff3e288454249898a9a003c68d689f000.avif"
+                alt="Modern industrial manufacturing facility showcasing advanced machinery"
                 className="rounded-2xl shadow-lg w-full h-auto landify-card hover:shadow-2xl hover:scale-105 transition-all duration-500"
                 data-testid="services-image"
               />
             </div>
           </ScrollReveal>
-          
+
           <ScrollReveal delay={400}>
             <div className="order-1 lg:order-2">
               <div className="space-y-8">
@@ -39,7 +39,7 @@ export default function ServicesSection() {
                     From prototyping to production, we deliver comprehensive manufacturing services that transform your concepts into high-quality, tangible products with precision and excellence.
                   </p>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3 group hover:bg-primary/5 p-2 rounded-lg transition-all duration-300">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
@@ -59,15 +59,15 @@ export default function ServicesSection() {
                   </div>
                 </div>
 
-              <Button 
-                size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 hover-lift"
-                data-testid="services-learn-more"
-              >
-                Learn More
-              </Button>
+                <Button
+                  size="lg"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 hover-lift"
+                  data-testid="services-learn-more"
+                >
+                  Learn More
+                </Button>
+              </div>
             </div>
-          </div>
           </ScrollReveal>
         </div>
       </div>

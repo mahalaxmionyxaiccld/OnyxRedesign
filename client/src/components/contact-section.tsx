@@ -115,7 +115,7 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <img
-              src="https://static.wixstatic.com/media/adfab1_79923954fca64f04be85e32093e6a856~mv2.png/v1/crop/x_65,y_0,w_1215,h_853/fill/w_743,h_522,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/three-collegues-working-car-showroom-Photoroom.png"
+              src="three-collegues-working-car-showroom-Photoroom.avif"
               alt="Professional team collaboration and consultation meeting"
               className="rounded-2xl shadow-lg w-full h-auto landify-card"
               data-testid="contact-image"

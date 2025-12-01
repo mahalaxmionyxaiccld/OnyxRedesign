@@ -64,28 +64,28 @@ export default function SoftwareServicesPage() {
       description:
         "Revolutionary AI systems that use generative AI for automated quality inspection, process optimization, and intelligent production scheduling with real-time adaptability",
       image:
-        "https://static.wixstatic.com/media/adfab1_ddfd068904b642dabafdfb29ae9751fc~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/manufacture.png",
+        "manufacture.avif",
     },
     {
       title: "Machine Learning Production Analytics",
       description:
         "Advanced ML algorithms for predictive maintenance, demand forecasting, supply chain optimization, and automated defect detection with continuous learning capabilities",
       image:
-        "https://static.wixstatic.com/media/adfab1_7bb6f0157fe34bd29b16dff423962f14~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/blueprint.png",
+        "blueprint.avif",
     },
     {
       title: "Cloud-Native Manufacturing Platforms",
       description:
         "Scalable cloud infrastructure for multi-facility coordination, real-time data synchronization, remote monitoring, and seamless integration with existing manufacturing systems",
       image:
-        "https://static.wixstatic.com/media/adfab1_ddfd068904b642dabafdfb29ae9751fc~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/manufacture.png",
+        "manufacture.avif",
     },
     {
       title: "Smart Factory Web Applications",
       description:
         "Modern web-based interfaces for production control, workforce management, inventory tracking, and executive dashboards with mobile-responsive design and real-time updates",
       image:
-        "https://static.wixstatic.com/media/adfab1_7bb6f0157fe34bd29b16dff423962f14~mv2.png/v1/fill/w_98,h_98,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/blueprint.png",
+        "blueprint.avif",
     },
   ];
 

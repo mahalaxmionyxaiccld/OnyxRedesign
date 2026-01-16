@@ -141,7 +141,7 @@ export default function MaterialHandlingCranePage() {
             <div className="relative">
               <img
                 src="../crane_material_handling.png"
-                alt="Material Handling Crane"
+                alt="Material Handling Systems"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
                 data-testid="hero-image"
               />

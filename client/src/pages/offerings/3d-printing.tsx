@@ -18,27 +18,22 @@ export default function ThreeDPrintingPage() {
   const features = [
     {
       icon: <CheckCircle className="h-6 w-6 text-primary" />,
-      title: "Selective Laser Sintering (SLS)",
-      description:
-        "Quality prototypes and production parts. 1-Day expedite. Free shipping on all US and international orders.",
-    },
-    {
-      icon: <Clock className="h-6 w-6 text-primary" />,
-      title: "HP Multi Jet Fusion (MJF)",
-      description:
-        "Quality prototypes and production parts in as little as one day. Free shipping on all US and international orders.",
-    },
-    {
-      icon: <Users className="h-6 w-6 text-primary" />,
-      title: "Fused Deposition Modeling (FDM)",
-      description:
-        "High-Quality Large Format FDM 3D Printing 1-Day Expedite Available. Free Shipping on All US and International Orders.",
+      title: "Selective Laser Sintering (SLS)"
     },
     {
       icon: <Shield className="h-6 w-6 text-primary" />,
       title: "Stereolithography (SLA)",
-      description:
-        "High-Resolution Prototypes in Days Free shipping on all US 3D printing orders",
+      
+    },
+    {
+      icon: <Users className="h-6 w-6 text-primary" />,
+      title: "Fused Deposition Modeling (FDM)",
+      
+    },
+    {
+      icon: <Clock className="h-6 w-6 text-primary" />,
+      title: "HP Multi Jet Fusion (MJF)",
+      
     },
   ];
 
@@ -94,8 +89,7 @@ export default function ThreeDPrintingPage() {
               >
                 Get instant online 3D printing service quotes on custom parts in
                 over 80 metal and plastic materials. Order 3D Printed items and
-                get Free Shipping on all US orders. ISO 9001:2015, ISO 13485,
-                IATF 16949:2016, and AS9100D certified. ITAR registered.
+                get shipped within 2-3 days to your desired location all over the globe.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button
@@ -118,7 +112,7 @@ export default function ThreeDPrintingPage() {
             </div>
             <div>
               <img
-                src="../3Dprinting.png"
+                src="../adfab1_c9a48dfff8344514998ba29304ee2036~mv2.avif"
                 alt="Advanced 3D printing technology and equipment"
                 className="rounded-2xl shadow-lg w-full h-auto landify-card"
                 data-testid="hero-image"
@@ -163,7 +157,6 @@ export default function ThreeDPrintingPage() {
                 <h3 className="text-xl font-semibold text-foreground mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-muted-foreground">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -196,7 +189,13 @@ export default function ThreeDPrintingPage() {
               </div>
             </div>
 
-            {/* Applications */}
+            
+          </div>
+        </div>
+      </section>
+      <section className="section-padding bg-secondary/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Applications */}
             <div>
               <h2
                 className="text-3xl md:text-4xl font-bold text-foreground mb-8"
@@ -204,7 +203,7 @@ export default function ThreeDPrintingPage() {
               >
                 Applications
               </h2>
-              <div className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {applications.map((application, index) => (
                   <div
                     key={index}
@@ -221,8 +220,7 @@ export default function ThreeDPrintingPage() {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
+            </div>
       </section>
 
       {/* CTA Section */}
@@ -246,12 +244,7 @@ export default function ThreeDPrintingPage() {
             <Button variant="secondary" size="lg" data-testid="contact-button">
               Contact Us Now
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              data-testid="upload-files-button"
-            >
+            <Button variant="secondary" size="lg" data-testid="contact-button">
               Upload Your Files
             </Button>
           </div>

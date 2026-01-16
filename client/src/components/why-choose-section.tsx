@@ -3,7 +3,7 @@ export default function WhyChooseSection() {
     {
       icon: "3d-printing.avif",
       title: "Cutting-Edge Technology",
-      description: "Experience the power of advanced 3D printing and precision manufacturing to bring your ideas to life."
+      description: "Experience the power of advanced precision manufacturing to bring your ideas to life."
     },
     {
       icon: "settings.avif",
@@ -61,21 +61,7 @@ export default function WhyChooseSection() {
           ))}
         </div>
 
-        <div className="text-center">
-          <div className="relative">
-            <img
-              src="ImagebyMaksymKaharlytskyi.avif"
-              alt="Manufacturing possibilities showcase with various advanced products"
-              className="rounded-2xl shadow-lg w-full h-auto max-w-2xl mx-auto landify-card"
-              data-testid="possibilities-image"
-            />
-            <div className="mt-8">
-              <h3 className="text-2xl lg:text-3xl font-bold text-foreground" data-testid="possibilities-title">
-                Possibilities Are Endless
-              </h3>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

@@ -11,7 +11,10 @@ export default function ServicesSection() {
               Our Offerings
             </h2>
             <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed" data-testid="services-description">
-              Onyx is a One-Stop partner to all Industrial sectors, helping companies transfer their manufacturing value chain with our complete manufacturing and engineering solutions - from Prototyping to Production.
+              Onyx is a One-Stop partner to all Industrial sectors, helping companies transfer their manufacturing value chain with our complete manufacturing and engineering solutions.
+            </p>
+            <p className="text-1xl md:text-1xl lg:text-2xl font-bold">
+              From Prototyping to Production
             </p>
           </div>
         </ScrollReveal>
@@ -43,29 +46,22 @@ export default function ServicesSection() {
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3 group hover:bg-primary/5 p-2 rounded-lg transition-all duration-300">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
-                    <span className="text-foreground group-hover:text-primary transition-colors duration-300">Advanced 3D printing and precision manufacturing</span>
+                    <span className="text-foreground group-hover:text-primary transition-colors duration-300">Manufacturing Services</span>
                   </div>
                   <div className="flex items-start space-x-3 group hover:bg-primary/5 p-2 rounded-lg transition-all duration-300">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
-                    <span className="text-foreground group-hover:text-primary transition-colors duration-300">Complete value chain transformation</span>
+                    <span className="text-foreground group-hover:text-primary transition-colors duration-300">Material Handling Automation & Robotics Services</span>
                   </div>
                   <div className="flex items-start space-x-3 group hover:bg-primary/5 p-2 rounded-lg transition-all duration-300">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
-                    <span className="text-foreground group-hover:text-primary transition-colors duration-300">Expert engineering across all industrial sectors</span>
+                    <span className="text-foreground group-hover:text-primary transition-colors duration-300">Sourcing Services</span>
                   </div>
                   <div className="flex items-start space-x-3 group hover:bg-primary/5 p-2 rounded-lg transition-all duration-300">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0 group-hover:scale-150 transition-transform duration-300"></div>
-                    <span className="text-foreground group-hover:text-primary transition-colors duration-300">Cutting-edge technology and innovation</span>
+                    <span className="text-foreground group-hover:text-primary transition-colors duration-300">Supplier Development Services</span>
                   </div>
                 </div>
 
-                <Button
-                  size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 hover-lift"
-                  data-testid="services-learn-more"
-                >
-                  Learn More
-                </Button>
               </div>
             </div>
           </ScrollReveal>

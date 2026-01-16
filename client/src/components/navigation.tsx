@@ -91,7 +91,7 @@ export default function Navigation() {
                 <DropdownMenuContent>
                   <DropdownMenuItem asChild>
                     <Link href="/products/material-handling-crane" className="w-full" data-testid="nav-material-handling-crane">
-                      Material Handling Crane
+                      Material Handling Systems
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -123,11 +123,10 @@ export default function Navigation() {
               >
                 Contact Us
               </Link>
-              <Button
+          
+              <Button 
                 onClick={() => scrollToSection('contact')}
-                className="bg-primary text-primary-foreground hover:bg-primary/90 btn-hover-scale"
-                data-testid="nav-get-quote"
-              >
+                variant="secondary" size="lg" data-testid="contact-button">
                 Get Quote
               </Button>
             </div>
@@ -214,7 +213,7 @@ export default function Navigation() {
                   data-testid="mobile-nav-material-handling-crane"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Material Handling Crane
+                  Material Handling Systems
                 </Link>
                 <Link
                   href="/products/software-services"

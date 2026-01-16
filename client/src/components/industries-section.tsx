@@ -55,41 +55,48 @@ export default function IndustriesSection() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6" data-testid="industries-title">
               Possibilities Are Endless
             </h2>
-            <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed" data-testid="industries-description">
-              From concept to creation, we empower industries with limitless opportunities through innovation, advanced engineering, and precision manufacturing.
+            <p className="text-lg lg:text-xl text-secondary max-w-4xl mx-auto leading-relaxed" data-testid="industries-description">
+              We cater to Precision Manufacturing applications for every Industry.
             </p>
           </div>
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="relative">
-            <img
-              src="freepik__upload__49441.avif"
-              alt="Industrial manufacturing facility showcasing diverse industry applications"
+          <video
+              src="manufacturing.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
               className="rounded-2xl shadow-2xl w-full h-auto mb-12 landify-card hover:shadow-3xl transition-all duration-500"
               data-testid="industries-hero-image"
             />
-          </div>
+
         </ScrollReveal>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {industries.map((industry, index) => (
             <ScrollReveal key={index} delay={index * 100}>
               <div
-                className="bg-primary/80 dark:bg-card/80 backdrop-blur-sm p-6 lg:p-8 rounded-xl shadow-lg border border-border/20 hover-lift text-center landify-card transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
-                data-testid={`industry-card-${index}`}
+                className="bg-secondary text-primary-foreground p-6 lg:p-8 rounded-xl shadow-lg 
+                          border border-primary/30 text-center transform hover:scale-105 
+                          transition-all duration-300 hover:shadow-2xl"
               >
-                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center bg-primary/10 rounded-full p-2 transition-all duration-300 group-hover:bg-primary/80">
+                <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center 
+                                bg-primary-foreground/10 rounded-full">
                   <img
                     src={industry.icon}
                     alt={`${industry.name} industry icon`}
-                    className="w-16 h-16 object-contain filter transition-all duration-300 hover:scale-110"
+                    className="w-16 h-16 object-contain"
                   />
                 </div>
-                <h3 className="text-lg font-bold text-foreground transition-colors duration-300" data-testid={`industry-name-${index}`}>
+
+                <h3 className="text-lg font-bold">
                   {industry.name}
                 </h3>
               </div>
+
             </ScrollReveal>
           ))}
         </div>

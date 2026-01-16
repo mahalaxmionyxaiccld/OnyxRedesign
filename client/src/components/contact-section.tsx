@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MapIcon } from "lucide-react";
 import type { ContactFormData } from "@shared/schema";
 import { contactFormSchema } from "@shared/schema";
 
@@ -115,7 +115,7 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <img
-              src="three-collegues-working-car-showroom-Photoroom.avif"
+              src="image3.png"
               alt="Professional team collaboration and consultation meeting"
               className="rounded-2xl shadow-lg w-full h-auto landify-card"
               data-testid="contact-image"
@@ -146,7 +146,18 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="font-semibold">Visit Us</div>
-                  <div className="text-muted-foreground">T188/6, MIDC, Bhosari, Pune 411026 Behind Faurecia company</div>
+                    <div className="text-muted-foreground">
+                        <a
+                          href="https://maps.app.goo.gl/gNrHDKcpYCKf8UCU9"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block text-blue-600 bg-blue-50 dark:bg-blue-950/30
+                                    px-2 py-1 rounded-md hover:bg-blue-100 dark:hover:bg-blue-900/40
+                                    underline underline-offset-2 transition"
+                        >
+                          T188/6, MIDC, Bhosari, Pune 411026 Behind Faurecia company
+                        </a>
+                    </div>
                 </div>
               </div>
             </div>

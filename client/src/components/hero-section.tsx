@@ -68,10 +68,9 @@ export default function HeroSection() {
               </Button>
               <Button
                 onClick={scrollToContact}
-                variant="outline"
                 size="lg"
-                className="border-2 border-white text-white px-8 py-4 text-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
-                data-testid="button-enquire-now"
+                className="bg-white text-primary px-8 py-4 text-lg font-semibold hover:bg-white/90 transition-all duration-300 hover-lift transform hover:scale-105 hover:shadow-xl"
+                data-testid="button-get-quote"
               >
                 Enquire Now
               </Button>

@@ -2,43 +2,63 @@ export default function ClientLogosSection() {
   const clientLogos = [
     {
       id: 1,
-      name: "BOBST India"
+      name: "BOBST India",
+      logoPath: ""
     },
     {
       id: 2,
-      name: "Mahindra & Mahindra"
+      name: "Mahindra & Mahindra",
+      logoPath: ""
     },
     {
       id: 3,
-      name: "ONGC"
+      name: "ONGC",
+      logoPath: ""
     },
     {
       id: 4,
-      name: "Mag9"
+      name: "BBS Automation",
+      logoPath: ""
     },
     {
       id: 5,
-      name: "BBS Automation"
+      name: "Ecoppia Scientific LLP",
+      logoPath: ""
     },
     {
       id: 6,
-      name: "Ecoppia Scientific LLP"
+      name: "Packam Controls",
+      logoPath: ""
     },
     {
       id: 7,
-      name: "Packam Controls"
+      name: "Infinity Automation Systems pvt ltd",
+      logoPath: ""
     },
     {
       id: 8,
-      name: "Infinity Automation Systems pvt ltd"
+      name: "Milcon Engineers",
+      logoPath: ""
     },
     {
       id: 9,
-      name: "Milcon Engineers"
+      name: "SSIG Manufacturing Advancements",
+      logoPath: ""
     },
     {
       id: 10,
-      name: "SSIG"
+      name: "Divide by Zero Technologies",
+      logoPath: ""
+    },
+    {
+      id:11,
+      name: "Nayam Innovation",
+      logoPath: ""
+    },
+    {
+      id: 12,
+      name:"Advaitech Studios",
+      logoPath: ""
     }
   ];
 

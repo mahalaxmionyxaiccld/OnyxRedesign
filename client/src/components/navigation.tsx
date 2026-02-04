@@ -25,13 +25,13 @@ export default function Navigation() {
   return (
     <nav className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           <div className="flex items-center">
             <Link href="/" className="flex items-center" data-testid="logo">
               <img
-                src="Onyx_Industries-removebg-preview.avif"
+                src="onyx_vertical.png"
                 alt="Onyx Industries"
-                className="h-12 w-auto"
+                className="h-24 w-auto"
               />
             </Link>
           </div>
@@ -123,8 +123,8 @@ export default function Navigation() {
               >
                 Contact Us
               </Link>
-          
-              <Button 
+
+              <Button
                 onClick={() => scrollToSection('contact')}
                 variant="secondary" size="lg" data-testid="contact-button">
                 Get Quote

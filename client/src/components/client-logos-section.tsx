@@ -1,66 +1,88 @@
+import { useEffect, useState } from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
+} from "@/components/ui/carousel";
+
 export default function ClientLogosSection() {
+  const [api, setApi] = useState<CarouselApi>();
+
   const clientLogos = [
     {
       id: 1,
       name: "BOBST India",
-      logoPath: ""
+      logoPath: "/clientlogo/bobst.png"
     },
     {
       id: 2,
       name: "Mahindra & Mahindra",
-      logoPath: ""
+      logoPath: "/clientlogo/mahindra.png"
     },
     {
       id: 3,
       name: "ONGC",
-      logoPath: ""
+      logoPath: "/clientlogo/ongc.jpg"
     },
     {
       id: 4,
       name: "BBS Automation",
-      logoPath: ""
+      logoPath: "/clientlogo/bbsautomation.png"
     },
     {
       id: 5,
       name: "Ecoppia Scientific LLP",
-      logoPath: ""
+      logoPath: "/clientlogo/ecoppia.png"
     },
     {
       id: 6,
       name: "Packam Controls",
-      logoPath: ""
+      logoPath: "/clientlogo/packam.png"
     },
     {
       id: 7,
       name: "Infinity Automation Systems pvt ltd",
-      logoPath: ""
+      logoPath: "/clientlogo/infinityautomation.jpg"
     },
     {
       id: 8,
       name: "Milcon Engineers",
-      logoPath: ""
+      logoPath: "/clientlogo/milcon.jpg"
     },
     {
       id: 9,
       name: "SSIG Manufacturing Advancements",
-      logoPath: ""
+      logoPath: "/clientlogo/ssig.png"
     },
     {
       id: 10,
       name: "Divide by Zero Technologies",
-      logoPath: ""
+      logoPath: "/clientlogo/dividebyzero.png"
     },
     {
-      id:11,
+      id: 11,
       name: "Nayam Innovation",
-      logoPath: ""
+      logoPath: "/clientlogo/nayam.png"
     },
     {
       id: 12,
-      name:"Advaitech Studios",
-      logoPath: ""
+      name: "Advaitech Studios",
+      logoPath: "/clientlogo/advaitech.png"
     }
   ];
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    const intervalId = setInterval(() => {
+      api.scrollNext();
+    }, 3000);
+
+    return () => clearInterval(intervalId);
+  }, [api]);
 
   return (
     <section className="section-padding bg-secondary/10">
@@ -74,12 +96,33 @@ export default function ClientLogosSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12 items-center justify-items-center">
-          {clientLogos.map((logo) => (
-            <div key={logo.id} className="flex justify-center items-center" data-testid={`client-logo-${logo.id}`}>
-              <p className="text-lg font-bold text-foreground" data-testid={`client-name-${logo.id}`}>{logo.name}</p>
-            </div>
-          ))}
+        <div className="relative">
+          {/* Fade edges */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background/5 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background/5 to-transparent z-10 pointer-events-none" />
+
+          <Carousel
+            setApi={setApi}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4 md:-ml-8">
+              {clientLogos.map((logo) => (
+                <CarouselItem key={logo.id} className="pl-4 md:pl-8 basis-1/2 md:basis-1/4 lg:basis-1/5">
+                  <div className="flex justify-center items-center h-24 bg-card/50 rounded-lg p-4 hover:bg-card transition-colors duration-300" data-testid={`client-logo-${logo.id}`}>
+                    <img
+                      src={logo.logoPath}
+                      alt={logo.name}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </section>

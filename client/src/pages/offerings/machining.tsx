@@ -39,26 +39,26 @@ export default function MachiningPage() {
       title: "CNC Milling",
       description: "Precision milling for complex parts and prototypes",
       image:
-        "manufacture.avif",
+        "../../manufacture.avif",
     },
     {
       title: "CNC Turning",
       description:
         "High-precision turning for cylindrical and rotational parts",
       image:
-        "blueprint.avif",
+        "../../blueprint.avif",
     },
     {
       title: "Swiss Machining",
       description: "Ultra-precise machining for small, complex components",
       image:
-        "manufacture.avif",
+        "../../manufacture.avif",
     },
     {
       title: "Surface Finishing",
       description: "Professional finishing including anodizing and coating",
       image:
-        "blueprint.avif",
+        "../../blueprint.avif",
     },
   ];
 

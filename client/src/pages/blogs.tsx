@@ -3,12 +3,13 @@ import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BookOpen, Calendar, Clock, User } from "lucide-react";
 import { useState } from "react";
+import SEO from "@/components/seo";
 
 export default function BlogsPage() {
   const [selectedArticle, setSelectedArticle] = useState<number | null>(null);
 
   const navigateToContact = () => {
-    window.location.href = '/#contact';
+    window.location.href = '/contact';
   };
 
   const articles = [
@@ -103,6 +104,11 @@ export default function BlogsPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Manufacturing Insights & Technical Articles - Onyx Industries Blog"
+        description="Stay updated with the latest trends in 3D Printing, CNC Machining, AI in manufacturing, and sustainable industrial practices."
+        keywords="Manufacturing Blog, 3D Printing Trends, CNC Machining Insights, Industrial AI, Sustainable Manufacturing"
+      />
       <Navigation />
 
       {/* Hero Section */}

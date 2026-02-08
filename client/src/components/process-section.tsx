@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { openContactPage } from "@/lib/utils";
 
 export default function ProcessSection() {
   const steps = [
@@ -18,13 +19,6 @@ export default function ProcessSection() {
       description: "High-quality, production-ready parts, shipped with speed and reliability."
     }
   ];
-
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   return (
     <section className="section-padding bg-background">
@@ -60,7 +54,7 @@ export default function ProcessSection() {
 
         <div className="text-center mt-16">
           <Button
-            onClick={scrollToContact}
+            onClick={openContactPage}
             size="lg"
             className="bg-primary text-primary-foreground px-10 py-4 text-lg font-semibold hover:bg-primary/90 transition-all duration-200 hover-lift"
             data-testid="process-lets-connect"

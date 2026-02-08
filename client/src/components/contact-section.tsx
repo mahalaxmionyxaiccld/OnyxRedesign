@@ -146,18 +146,18 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="font-semibold">Visit Us</div>
-                    <div className="text-muted-foreground">
-                        <a
-                          href="https://maps.app.goo.gl/gNrHDKcpYCKf8UCU9"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block text-blue-600 bg-blue-50 dark:bg-blue-950/30
+                  <div className="text-muted-foreground">
+                    <a
+                      href="https://maps.app.goo.gl/gNrHDKcpYCKf8UCU9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-blue-600 bg-blue-50 dark:bg-blue-950/30
                                     px-2 py-1 rounded-md hover:bg-blue-100 dark:hover:bg-blue-900/40
                                     underline underline-offset-2 transition"
-                        >
-                          T188/6, MIDC, Bhosari, Pune 411026 Behind Faurecia company
-                        </a>
-                    </div>
+                    >
+                      T188/6, MIDC, Bhosari, Pune 411026 Behind Faurecia company
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

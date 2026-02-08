@@ -2,11 +2,10 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight, Zap, Target, Cog, Award } from "lucide-react";
+import { openContactPage } from "@/lib/utils";
+import SEO from "@/components/seo";
 
 export default function MachiningPage() {
-  const navigateToContact = () => {
-    window.location.href = "/#contact";
-  };
 
   const capabilities = [
     {
@@ -76,6 +75,11 @@ export default function MachiningPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Custom CNC Machining Services - Precision Metal & Plastic Parts"
+        description="High-precision CNC milling and turning services. Get instant quotes for custom machined parts with ISO certified quality."
+        keywords="CNC Machining Pune, CNC Milling, CNC Turning, Precision Machining, Custom Metal Parts, Plastic Machining"
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -103,25 +107,18 @@ export default function MachiningPage() {
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                  onClick={navigateToContact}
+                  onClick={openContactPage}
                   data-testid="get-quote-button"
                 >
                   Get Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  data-testid="learn-more-button"
-                >
-                  Learn More
                 </Button>
               </div>
             </div>
             <div>
               <img
                 src="../machining.jpg"
-                alt="Advanced CNC machining equipment and precision manufacturing"
+                alt="Precision CNC machining center producing high-quality metal parts"
                 className="rounded-2xl shadow-lg w-full h-auto landify-card"
                 data-testid="hero-image"
               />
@@ -267,16 +264,8 @@ export default function MachiningPage() {
             specifications.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" data-testid="contact-button">
+            <Button variant="secondary" size="lg" data-testid="contact-button" onClick={openContactPage}>
               Request Quote
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              data-testid="technical-specs-button"
-            >
-              Technical Specifications
             </Button>
           </div>
         </div>

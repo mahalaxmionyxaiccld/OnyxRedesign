@@ -9,11 +9,10 @@ import {
   Palette,
   Award,
 } from "lucide-react";
+import { openContactPage } from "@/lib/utils";
+import SEO from "@/components/seo";
 
 export default function VacuumCastingPage() {
-  const navigateToContact = () => {
-    window.location.href = "/#contact";
-  };
 
   const advantages = [
     {
@@ -109,6 +108,11 @@ export default function VacuumCastingPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Vacuum Casting Services - Low Volume Production & Prototyping"
+        description="High-quality vacuum casting for plastic parts and functional prototypes. Rapid turnaround for polyurethane casting in Pune."
+        keywords="Vacuum Casting Pune, Polyurethane Casting, Batch Production, Silicone Molds, Plastic Prototyping"
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -135,25 +139,18 @@ export default function VacuumCastingPage() {
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                  onClick={navigateToContact}
+                  onClick={openContactPage}
                   data-testid="get-quote-button"
                 >
                   Get Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  data-testid="learn-more-button"
-                >
-                  View Process
                 </Button>
               </div>
             </div>
             <div>
               <img
                 src="../vaccum_casting.png"
-                alt="Vacuum casting equipment and polyurethane casting process"
+                alt="Technicians performing precision vacuum casting with polyurethane resins"
                 className="rounded-2xl shadow-lg w-full h-auto landify-card"
                 data-testid="hero-image"
               />
@@ -347,16 +344,8 @@ export default function VacuumCastingPage() {
             vacuum casting services. Get a quote today!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" data-testid="contact-button">
+            <Button variant="secondary" size="lg" data-testid="contact-button" onClick={openContactPage}>
               Request Quote
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              data-testid="materials-guide-button"
-            >
-              Materials Guide
             </Button>
           </div>
         </div>

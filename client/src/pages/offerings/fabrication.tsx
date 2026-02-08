@@ -9,11 +9,10 @@ import {
   Truck,
   Award,
 } from "lucide-react";
+import { openContactPage } from "@/lib/utils";
+import SEO from "@/components/seo";
 
 export default function FabricationPage() {
-  const navigateToContact = () => {
-    window.location.href = "/#contact";
-  };
 
   const services = [
     {
@@ -133,6 +132,11 @@ export default function FabricationPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Custom Fabrication Services - Structural Steel & Industrial Parts"
+        description="Complete fabrication solutions from design to assembly. Expert welding and structural fabrication for industrial applications."
+        keywords="Structural Fabrication, Custom Welding, Metal Joining, Industrial Fabrication, Assembly Services, Steel Structures"
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -159,25 +163,18 @@ export default function FabricationPage() {
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                  onClick={navigateToContact}
+                  onClick={openContactPage}
                   data-testid="get-quote-button"
                 >
                   Get Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  data-testid="learn-more-button"
-                >
-                  View Projects
                 </Button>
               </div>
             </div>
             <div>
               <img
                 src="../fabrication.png"
-                alt="Custom fabrication and manufacturing services"
+                alt="Skilled metalworker performing precision welding on a custom steel structure"
                 className="rounded-2xl shadow-lg w-full h-auto landify-card"
                 data-testid="hero-image"
               />
@@ -371,16 +368,8 @@ export default function FabricationPage() {
             you to bring your project to life with precision and quality.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" data-testid="contact-button">
+            <Button variant="secondary" size="lg" data-testid="contact-button" onClick={openContactPage}>
               Discuss Your Project
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              data-testid="portfolio-button"
-            >
-              View Portfolio
             </Button>
           </div>
         </div>

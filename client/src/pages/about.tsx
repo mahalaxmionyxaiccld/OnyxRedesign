@@ -2,16 +2,20 @@ import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Users } from "lucide-react";
+import { openContactPage } from "@/lib/utils";
+import SEO from "@/components/seo";
 
 export default function AboutPage() {
-  const navigateToContact = () => {
-    window.location.href = '/#contact';
-  };
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="About Onyx Industries - Excellence in Precision Manufacturing"
+        description="Learn about Onyx Industries, our mission to transform concepts into high-quality products, and our commitment to innovation and precision."
+        keywords="About Onyx Industries, Precision Manufacturing Company, Pune Manufacturers, ISO Certified Factory"
+      />
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-to-br from-primary/10 via-background to-secondary/5 pt-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -23,10 +27,10 @@ export default function AboutPage() {
             Your trusted partner in precision manufacturing and 3D printing solutions. Learn more about our commitment to quality, innovation, and customer success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              onClick={navigateToContact}
+              onClick={openContactPage}
               data-testid="contact-button"
             >
               Get in Touch
@@ -45,9 +49,9 @@ export default function AboutPage() {
           <p className="text-lg text-muted-foreground mb-8" data-testid="overview-description">
             At Onyx Industries, we combine cutting-edge technology with years of expertise to deliver precision manufacturing solutions that exceed expectations. Our comprehensive approach ensures that every project, from rapid prototyping to full-scale production, meets the highest standards of quality and reliability.
           </p>
-          <Button 
-            size="lg" 
-            onClick={navigateToContact}
+          <Button
+            size="lg"
+            onClick={openContactPage}
             data-testid="learn-more-button"
           >
             Learn More About Our Services

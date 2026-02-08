@@ -9,13 +9,14 @@ import {
   Shield,
   Award,
 } from "lucide-react";
+import SEO from "@/components/seo";
 
 export default function MaterialHandlingCranePage() {
   const navigateToContact = () => {
-    window.location.href = "/#contact";
+    window.location.href = "/contact";
   };
 
-  const scrollToContact = () => {
+  const openContactPage = () => {
     // Look for various contact/CTA sections on current page
     const contactElement =
       document.getElementById("contact") ||
@@ -25,9 +26,9 @@ export default function MaterialHandlingCranePage() {
         ?.closest("section");
 
     if (contactElement) {
-      contactElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.location.href = "/contact";
     } else {
-      window.location.href = "/#contact";
+      window.location.href = "/contact";
     }
   };
 
@@ -94,6 +95,11 @@ export default function MaterialHandlingCranePage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Material Handling Cranes & Systems - Industrial Lifting Solutions"
+        description="Precision-engineered overhead cranes, bridge cranes, and heavy lifting solutions. Custom material handling systems for manufacturing and ports."
+        keywords="Overhead Cranes, Bridge Cranes, Material Handling, Industrial Lifting, Crane Manufacturing, Heavy Duty Cranes"
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -121,27 +127,18 @@ export default function MaterialHandlingCranePage() {
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground btn-hover-scale"
-                  onClick={scrollToContact}
+                  onClick={openContactPage}
                   data-testid="get-quote-button"
                 >
                   Get Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="btn-hover-scale"
-                  onClick={scrollToContact}
-                  data-testid="learn-more-button"
-                >
-                  Learn More
                 </Button>
               </div>
             </div>
             <div className="relative">
               <img
                 src="../crane_material_handling.png"
-                alt="Material Handling Systems"
+                alt="Industrial overhead crane system in a large manufacturing facility"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
                 data-testid="hero-image"
               />
@@ -221,8 +218,8 @@ export default function MaterialHandlingCranePage() {
             </div>
             <div>
               <img
-                src="../crane_specification.png"
-                alt="Crane Specifications"
+                src="../../crane_specification.png"
+                alt="Technical drawing and specifications of a custom-built industrial crane"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"
                 data-testid="specifications-image"
               />
@@ -261,14 +258,7 @@ export default function MaterialHandlingCranePage() {
                   {app.title}
                 </h3>
                 <p className="text-muted-foreground mb-6">{app.description}</p>
-                <Button
-                  variant="outline"
-                  onClick={scrollToContact}
-                  data-testid={`application-contact-${index}`}
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+
               </div>
             ))}
           </div>
@@ -297,15 +287,6 @@ export default function MaterialHandlingCranePage() {
             >
               Contact Our Experts
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              onClick={navigateToContact}
-              data-testid="cta-quote-button"
-            >
-              Get Custom Quote
             </Button>
           </div>
         </div>

@@ -9,11 +9,10 @@ import {
   Shield,
   Award,
 } from "lucide-react";
+import { openContactPage } from "@/lib/utils";
+import SEO from "@/components/seo";
 
 export default function SheetMetalPage() {
-  const navigateToContact = () => {
-    window.location.href = "/#contact";
-  };
 
   const capabilities = [
     {
@@ -92,6 +91,11 @@ export default function SheetMetalPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Sheet Metal Fabrication Services - Laser Cutting & Bending"
+        description="Professional sheet metal fabrication including laser cutting, waterjet cutting, and press brake forming. Custom metal fabrication in Pune."
+        keywords="Sheet Metal Pune, Laser Cutting, Waterjet Cutting, Metal Fabrication, Bending Services, Custom Enclosures"
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -118,25 +122,18 @@ export default function SheetMetalPage() {
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                  onClick={navigateToContact}
+                  onClick={openContactPage}
                   data-testid="get-quote-button"
                 >
                   Get Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  data-testid="learn-more-button"
-                >
-                  View Portfolio
                 </Button>
               </div>
             </div>
             <div>
               <img
                 src="../sheet_metal.jpg"
-                alt="Sheet metal fabrication and manufacturing equipment"
+                alt="Advanced laser cutting machine processing industrial sheet metal"
                 className="rounded-2xl shadow-lg w-full h-auto landify-card"
                 data-testid="hero-image"
               />
@@ -296,16 +293,8 @@ export default function SheetMetalPage() {
             sheet metal components that meet your exact requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" data-testid="contact-button">
+            <Button variant="secondary" size="lg" data-testid="contact-button" onClick={openContactPage}>
               Get Custom Quote
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              data-testid="capabilities-button"
-            >
-              View Capabilities
             </Button>
           </div>
         </div>

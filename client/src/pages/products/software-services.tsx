@@ -7,15 +7,16 @@ import {
   Code,
   Cloud,
   Database,
-  Shield,
+  Award,
 } from "lucide-react";
+import SEO from "@/components/seo";
 
 export default function SoftwareServicesPage() {
   const navigateToContact = () => {
-    window.location.href = "/#contact";
+    window.location.href = "/contact";
   };
 
-  const scrollToContact = () => {
+  const openContactPage = () => {
     // Look for various contact/CTA sections on current page
     const contactElement =
       document.getElementById("contact") ||
@@ -25,9 +26,9 @@ export default function SoftwareServicesPage() {
         ?.closest("section");
 
     if (contactElement) {
-      contactElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.location.href = "/contact";
     } else {
-      window.location.href = "/#contact";
+      window.location.href = "/contact";
     }
   };
 
@@ -51,7 +52,7 @@ export default function SoftwareServicesPage() {
         "ML-driven analytics for production optimization, demand forecasting, and intelligent resource allocation",
     },
     {
-      icon: <Shield className="h-6 w-6 text-primary" />,
+      icon: <Award className="h-6 w-6 text-primary" />,
       title: "Industrial Automation & IoT",
       description:
         "Smart factory solutions with AI-enabled sensors, automated workflows, and predictive maintenance systems",
@@ -64,28 +65,28 @@ export default function SoftwareServicesPage() {
       description:
         "Revolutionary AI systems that use generative AI for automated quality inspection, process optimization, and intelligent production scheduling with real-time adaptability",
       image:
-        "manufacture.avif",
+        "../../manufacture.avif",
     },
     {
       title: "Machine Learning Production Analytics",
       description:
         "Advanced ML algorithms for predictive maintenance, demand forecasting, supply chain optimization, and automated defect detection with continuous learning capabilities",
       image:
-        "blueprint.avif",
+        "../../blueprint.avif",
     },
     {
       title: "Cloud-Native Manufacturing Platforms",
       description:
         "Scalable cloud infrastructure for multi-facility coordination, real-time data synchronization, remote monitoring, and seamless integration with existing manufacturing systems",
       image:
-        "manufacture.avif",
+        "../../manufacture.avif",
     },
     {
       title: "Smart Factory Web Applications",
       description:
         "Modern web-based interfaces for production control, workforce management, inventory tracking, and executive dashboards with mobile-responsive design and real-time updates",
       image:
-        "blueprint.avif",
+        "../../blueprint.avif",
     },
   ];
 
@@ -106,6 +107,11 @@ export default function SoftwareServicesPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Industrial Software Services & Automation - Smart Manufacturing"
+        description="Transform your manufacturing with our digital solutions. We offer IoT integration, ERP systems, and custom industrial software."
+        keywords="Industrial Software, Smart Manufacturing, IoT Pune, ERP for Manufacturing, Digital Transformation, Automation Software"
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -133,20 +139,11 @@ export default function SoftwareServicesPage() {
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground btn-hover-scale"
-                  onClick={scrollToContact}
+                  onClick={openContactPage}
                   data-testid="get-quote-button"
                 >
                   Get Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="btn-hover-scale"
-                  onClick={scrollToContact}
-                  data-testid="learn-more-button"
-                >
-                  Learn More
                 </Button>
               </div>
             </div>
@@ -242,7 +239,7 @@ export default function SoftwareServicesPage() {
                     </p>
                     <Button
                       variant="outline"
-                      onClick={scrollToContact}
+                      onClick={openContactPage}
                       className="btn-hover-scale"
                       data-testid={`service-contact-${index}`}
                     >
@@ -315,15 +312,6 @@ export default function SoftwareServicesPage() {
             >
               Contact Our Experts
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary btn-hover-scale"
-              onClick={navigateToContact}
-              data-testid="cta-quote-button"
-            >
-              Get Custom Quote
             </Button>
           </div>
         </div>

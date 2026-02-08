@@ -9,13 +9,13 @@ interface AnimatedCounterProps {
   startDelay?: number;
 }
 
-export default function AnimatedCounter({ 
-  end, 
-  duration = 2000, 
-  suffix = '', 
-  prefix = '', 
+export default function AnimatedCounter({
+  end,
+  duration = 2000,
+  suffix = '',
+  prefix = '',
   className = '',
-  startDelay = 0 
+  startDelay = 0
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -49,11 +49,11 @@ export default function AnimatedCounter({
         if (!startTime) startTime = timestamp;
         const progress = timestamp - startTime;
         const progressRatio = Math.min(progress / duration, 1);
-        
+
         // Easing function for smooth animation
         const easedProgress = 1 - Math.pow(1 - progressRatio, 3);
         const currentCount = Math.floor(startCount + (end - startCount) * easedProgress);
-        
+
         setCount(currentCount);
 
         if (progressRatio < 1) {

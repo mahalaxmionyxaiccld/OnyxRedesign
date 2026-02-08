@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import ScrollReveal from "@/components/scroll-reveal";
+import { scrollToContact } from "@/lib/utils";
 
 export default function HeroSection() {
   const [typedText, setTypedText] = useState("");
@@ -23,22 +24,8 @@ export default function HeroSection() {
     return () => clearInterval(timer);
   }, []);
 
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
-  const scrollToAbout = () => {
-    const element = document.getElementById('about');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   return (
-    <section id="home" className="relative overflow-hidden bg-background pt-20 pb-16 lg:pt-28 lg:pb-24">
+    <section id="home" className="relative overflow-hidden bg-background pt-32 pb-16 lg:pt-32 lg:pb-24">
       <div className="absolute inset-0 landify-hero-bg opacity-95"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

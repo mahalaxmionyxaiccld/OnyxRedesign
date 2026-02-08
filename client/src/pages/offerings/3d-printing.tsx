@@ -1,5 +1,6 @@
 import Navigation from "@/components/navigation";
 import Footer from "@/components/footer";
+import ContactSection from "@/components/contact-section";
 import { Button } from "@/components/ui/button";
 import {
   CheckCircle,
@@ -9,11 +10,10 @@ import {
   Shield,
   Award,
 } from "lucide-react";
+import { openContactPage } from "@/lib/utils";
+import SEO from "@/components/seo";
 
 export default function ThreeDPrintingPage() {
-  const navigateToContact = () => {
-    window.location.href = "/#contact";
-  };
 
   const features = [
     {
@@ -23,17 +23,17 @@ export default function ThreeDPrintingPage() {
     {
       icon: <Shield className="h-6 w-6 text-primary" />,
       title: "Stereolithography (SLA)",
-      
+
     },
     {
       icon: <Users className="h-6 w-6 text-primary" />,
       title: "Fused Deposition Modeling (FDM)",
-      
+
     },
     {
       icon: <Clock className="h-6 w-6 text-primary" />,
       title: "HP Multi Jet Fusion (MJF)",
-      
+
     },
   ];
 
@@ -70,6 +70,11 @@ export default function ThreeDPrintingPage() {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="3D Printing Services - Rapid Prototyping & Custom Parts"
+        description="High-quality 3D printing services for rapid prototyping and production. We offer FDM, SLA, and SLS printing with a wide range of materials."
+        keywords="3D Printing Pune, Rapid Prototyping, FDM, SLA, SLS, Custom 3D Printed Parts, Industrial 3D Printing"
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -95,18 +100,11 @@ export default function ThreeDPrintingPage() {
                 <Button
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                  onClick={navigateToContact}
+                  onClick={openContactPage}
                   data-testid="get-quote-button"
                 >
                   Get Quote
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  data-testid="learn-more-button"
-                >
-                  Learn More
                 </Button>
               </div>
             </div>
@@ -189,67 +187,42 @@ export default function ThreeDPrintingPage() {
               </div>
             </div>
 
-            
+
           </div>
         </div>
       </section>
       <section className="section-padding bg-secondary/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Applications */}
-            <div>
-              <h2
-                className="text-3xl md:text-4xl font-bold text-foreground mb-8"
-                data-testid="applications-title"
-              >
-                Applications
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {applications.map((application, index) => (
-                  <div
-                    key={index}
-                    className="landify-card p-6"
-                    data-testid={`application-${index}`}
-                  >
-                    <h3 className="text-xl font-semibold text-foreground mb-3">
-                      {application.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {application.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+          {/* Applications */}
+          <div>
+            <h2
+              className="text-3xl md:text-4xl font-bold text-foreground mb-8"
+              data-testid="applications-title"
+            >
+              Applications
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {applications.map((application, index) => (
+                <div
+                  key={index}
+                  className="landify-card p-6"
+                  data-testid={`application-${index}`}
+                >
+                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                    {application.title}
+                  </h3>
+                  <p className="text-muted-foreground">
+                    {application.description}
+                  </p>
+                </div>
+              ))}
             </div>
-            </div>
-      </section>
-
-      {/* CTA Section */}
-      <section
-        className="section-padding bg-primary text-primary-foreground"
-        id="contact"
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Award className="h-16 w-16 mx-auto mb-6" />
-          <h2
-            className="text-3xl md:text-4xl font-bold mb-6"
-            data-testid="cta-title"
-          >
-            Ready to Start Your 3D Printing Project?
-          </h2>
-          <p className="text-xl mb-8 opacity-90" data-testid="cta-description">
-            Get a custom quote for your 3D printing needs. Our experts are ready
-            to help bring your ideas to life with precision and quality.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" data-testid="contact-button">
-              Contact Us Now
-            </Button>
-            <Button variant="secondary" size="lg" data-testid="contact-button">
-              Upload Your Files
-            </Button>
           </div>
         </div>
       </section>
+
+      {/* Contact Section */}
+      <ContactSection />
 
       <Footer />
     </div>
